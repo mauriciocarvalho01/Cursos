@@ -1,0 +1,30 @@
+<html>
+    <head>
+    	<meta charset="utf-8">
+        <title>Aulas de Javascript</title>
+        <script>
+            var frase ="Um dois testando";
+
+           var primeira = frase.charAt(0);//pegar algum elemento dentro de uma string
+
+           console.log(primeira);
+
+            //como pegar uma palavra
+
+            var letra = "";
+            var primeira_palavra = "";
+
+            var i = "";  //enquanto a letra for diferente de espaço pega  a letra da posição 'i' e concatena mais uma letra do proximo indice
+
+            while(letra != " ") {
+            	letra = frase.charAt(i);
+            	primeira_palavra = primeira_palavra + letra;
+            	i++;
+            }
+            console.log(primeira_palavra);
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<title>Primeira Página</title>
+	<meta charset="utf-8">
+	<meta name="author" content="Mauricio Carvalho"> <!--autor da página-->
+	<meta name="generator" content="Sublime Text 3">
+	<meta name="keywords" content="Comida Saudável, Marmita Saudável, Comida Fitness, Restaurantes, Doces, Pão de mel, Palha Italiana">
+	<meta name="description" content="Catálogo da kasmel">
+	<meta name="application-name" content="Kasmel Culinária Caseira">
+	<meta http-equiv="refresh" content="">
+
+
+	<style>
+		body {background:#ddd; font-family: georgia; } 
+	</style><!--adicionar código CSS-->
+	<script>
+		function escrevaN()
+		{
+			nome.innerHTML = "Mauricio Carvalho";
+		}
+		window.onload = escrevaN;
+
+		function sorteioNumero()
+		{
+			resultado.innerHTML = Math.random() * 5;
+		}
+		window.onload = sorteioNumero;
+	</script>
+
+
+</head>
+<body>
+
+	<p>Até amanhã &nbsp; ok?</p> <!--&nbsp;  é para adionar espaço entre as letras-->
+	<p> &euro; &dollar;</p> <!--&euro...&dollar etc;  é para adionar moedas-->
+
+	<p id="nome"></p>
+	</br></br></br></br>
+
+	<p id="resultado"></p>
+
+	<p>Texto <b> Destaque</b> </p>
+	<p>Texto <i> Italico</i> </p>
+	<p>Texto <u> Sublinhado</u> </p>
+	<p>Texto <sub> Subscrito </sub> </p>
+	<p>Texto <sup> Superescrito</sup> </p>
+	<p>Texto <s> Riscado</s> </p>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+/*EXERCICIO 7 
+section p:nth-of-type(2n+1){
+	color:#F5FFFA;
+	text-align: center;
+}*/
+
+
+/*div,header,footer{
+    border:2px solid #fff;
+}
+
+h2 + p{
+    color:#000;
+    background-color: #fff;
+}
+
+p:last-of-type{
+    color:#000;
+    background-color: #fff;
+}
+
+h2:first-of-type{
+    color:#000;
+    background-color: #fff;
+}
+
+span:only-child{
+    color:#000;
+    background-color: #f0ff;
+}
+
+footer p:nth-child(2n + 1){
+    color:#000;
+    background-color: #f05f;
+}
+
+p:only-of-type{
+    color:#000;
+    background-color: #f0f7;
+}
+
+p:nth-of-type(2n + 1){
+    color:#000;
+    background-color: #00f;
+}*/

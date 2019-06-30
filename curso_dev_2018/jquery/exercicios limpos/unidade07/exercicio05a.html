@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso jQuery Fundamental</title>
+        <style>
+            #info { position: absolute; top:300px; }
+            #principal { 
+                position: absolute; height:200px;
+                clip:rect(0 200px 200px 0); }/* faz as fotos ficarem em um espaço de 200 px  lado a lado*/
+			#janela { position:relative; 
+                height:200px; 
+                background-color:#069;
+                 top:0; left:0;  }
+            img {float:left;}/*tira os espaços entre as fotos*/
+		</style>
+        
+        <script src="jquery-3.2.1.min.js"></script>       
+        <script>
+
+                //criei uma função para mover as fotos
+                //para mover as fotos usei animate({left:"-=200"},1000)
+                //Ou seja, vai mover para a esquerda (left), em 1 seg;
+
+                // Após terminar de animar vai chamar a function(e){
+                //$('#info').html( $('#janela').position().left );
+                //Essa função pega a posição da foto após terminar a animação
+
+                //if( $('#janela').position().left == -800){
+                       // $('#janela').css('left',0);
+                   // } Esse 'if' testa se a posição da foto for -800,  ou seja o final. 
+                   // e faz a ação com css para a foto voltar a posição 0.
+
+
+                   var limite;
+
+                 function moverFotos(){
+                    $('#janela').animate({left:"-=200"}, 1000, function(e){
+                      if( $('#janela').position().left == limite){
+                         $('#janela').css('left',0);
+                        }
+
+                    });
+            }
+
+			$( function(e) {
+                limite = $('#janela img').length * $('#janela img').width() * -1;
+                //alert(limite);
+                $('#janela').append(' <img>');// acrescentei uma imagem
+                $('#janela img:last').attr( 'src' , 'imagens/foto1.jpg');//na ultima posição com o atributo attr
+	           setInterval(moverFotos, 4000); // chmaei a função moverFotos no setInterval, ou seja
+               //vai mover as fotos a cada 2 segs
+			});	
+		</script>        
+    </head>
+
+    <body>
+        <div id="principal"><!--Essa div abraça toda a div das fotos(#janela)-->
+            <div id="janela">
+                <img src = "imagens/foto1.jpg">
+                <img src = "imagens/foto2.jpg">
+                <img src = "imagens/foto3.jpg">
+                <img src = "imagens/foto4.jpg">
+                <img src = "imagens/foto5.jpg"><!--exclui a foto1 que tava no outro codigo-->
+            </div>
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,189 @@
+body{
+	margin:auto;
+	width:960px;
+	background-color:#FAEBD7;
+	padding:0px;
+	background:url(../imagens/fundo.gif) repeat-x;
+}
+
+.fixFloat{
+	clear:both;
+}
+
+#midias{
+	float:right;
+	margin-top:40px;
+}
+
+#cab img{
+	float:left;
+}
+
+
+
+
+#midias img{
+	float:right;
+	width:32px;
+	height:32px;
+}
+#t{
+	margin:0px 10px 0px 0px;
+}
+
+#menu{
+
+	float:left;
+	margin-top:93px;
+	width:453px;
+
+	}
+
+	#menu ul{
+		list-style: none;
+		background:linear-gradient(to bottom, #c0c0c0c0, #696969);
+		padding:0px;
+		margin:0px;
+		border-radius:5px;
+		
+	}
+	#menu li:hover {
+		background:linear-gradient(to bottom, #6A5ACD,	#DCDCDC);
+		border-radius:5px;
+		width:160px;
+	}
+
+	#menu li{
+		height:57px;
+		display: table-cell;
+		text-align:center;
+		vertical-align: middle;
+		width:150px;
+		border-right:1px solid 	#4682B4;
+	}
+
+	#menu ul li a{
+		text-decoration: none;
+		font-size:20px;
+		color:#fff;
+	}
+
+	#banner{
+		margin-top:15px;
+	}
+
+
+	#banner img{
+		width:960px;
+		margin-top:;
+	}
+
+	#cxlat{
+
+	}
+
+	#lateral{
+		float:right;
+		background-color:#DCDCDC;
+		width:190px;
+		padding: 5px;
+		border-radius:10px;
+	}
+
+	#lateral h1{
+		font-size:17px;
+		text-align:center;
+		border-bottom:#000 solid 1px;
+		margin-top:-5px;
+	}
+
+	#lateral h2{
+
+		font-size:15px;
+	}
+
+	#lateral p{
+		text-align:justify;
+	}
+
+	#main{
+		background-color:#F0F8FF;
+		width:730px;
+		border-radius:10px;
+		padding:5px;
+	}
+
+	#main h1{
+		font-size:20pt;
+		border-bottom:#4169E1 solid 1px;
+		margin:10px;
+	}
+	#main h2{
+		font-size:15px;
+		margin:10px;
+	}
+	#main p{
+		text-align:justify;
+
+	}
+
+	footer{
+	
+		color:#696969;
+		border:	#D3D3D3 solid 1px;
+		border-radius:20px;
+	}
+
+	footer p{
+		display:inline-block;
+		width:316px;
+		text-align:center;
+	}
+
+	#contato label{
+	color:#888;
+	font-size:15pt;
+	font-weight: bolder;
+	font-style:italic;
+	font-family:arial;
+	display:block;
+	margin-top:20px;
+}
+
+#contato input[type="submit"], #contato input[type="reset"]{
+	color:#fff;
+	font-size:15pt;
+	font-weight: bolder;
+	font-style:italic;
+	font-family:arial;
+	width: 120px
+	height:50;
+	border-radius:10px;
+	background:linear-gradient(to bottom, #2F4F4F, #7FFFD4);
+	cursor:pointer;
+}
+
+#audi{
+margin-top:50px; 
+margin-left:250px;
+margin-bottom: 50px;
+
+	background-color:#000;
+	border-radius:20px;
+}
+
+.v{
+
+	height:249px;
+	width:249px;
+	margin-left:10;margin-top:20px;
+	margin-left:250px;
+	float:left;
+	border-radius:20px;
+
+}
+
+
+
+
+

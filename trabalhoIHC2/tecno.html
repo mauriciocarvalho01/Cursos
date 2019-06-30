@@ -1,0 +1,482 @@
+    
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+
+<head><script LANGUAGE="JavaScript">
+<!-- hide this script tag's contents from old browsers ---  >
+//By Daniel C. Peterson, 1997  All Rights Reserved.
+//Modified with permission by Joe Hage - Team ScriptBuilder
+//For commercial use rates send email to: webmaster@webwinder.com
+//PLATFORMS: Netscape Navigator 3.0 and higher,
+//           Microsoft Internet Explorer 3.02 and higher
+/*======================================================================
+   init()
+   
+   Description: 
+        Initialize the array elements.
+   
+====================================================================== */
+function init() { 
+              ageFact = new Array(28,20,16,8,6,5,4,3,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)
+}
+
+/*======================================================================
+   computeForm(form)
+   
+   Description: 
+        Compute all fields within the form
+   
+====================================================================== */
+function computeForm(form) {
+//Tax, License, and warranty Costs
+   var tax1 = 0;
+   var taxCost1 = 0;
+
+   if(form.salesTax1.value >1) {tax1 = form.salesTax1.value / 100; } else {tax1 = form.salesTax1.value; }
+   if(tax1 > 0) {taxCost1 = form.priceTag1.value * tax1; } else {taxCost1 = 0; }
+
+   var licCost1 = 0;
+   var warCost1 = form.warranty1.value;
+   var totPurch1 = 0;
+   licCost1 = form.license1.value * form.lifeExpect1.value;
+   totPurch1 = eval(taxCost1) + eval(licCost1) + eval(warCost1);
+   form.purchCost1.value = totPurch1;
+
+//Depreciation Costs
+   var timePass1 = eval(form.age1.value);
+   var accumDeprec1 = ageFact[form.age1.value]; 
+   while(timePass1 < eval(form.lifeExpect1.value) + eval(form.age1.value) - eval(1)) {
+       timePass1 = eval(timePass1 + 1);
+       accumDeprec1 = accumDeprec1 + ageFact[eval(timePass1 * 1)];
+       if(timePass1 > 50) {break; } else {continue; }
+   }
+
+   form.depreCost1.value = accumDeprec1 / 100 * form.priceTag1.value;
+
+//Finance Costs
+   if(form.finance1.value == "n" || form.finance1.value == "N" || form.downPay1.value == 0 || form.intRate1.value == 0 || form.nPer1.value == 0) {
+     form.downPay1.value = 0;
+     form.intRate1.value = 0;
+     form.nPer1.value = 0;
+     form.intCost1.value = 0; } else {
+
+   var int1 = form.intRate1.value;
+    if (int1 > 1.0) {int1 = int1 / 100.0; form.intRate1.value = int1; }
+    int1 /= 12;
+    var prin1 = eval(form.priceTag1.value) + eval(taxCost1) + eval(form.license1.value) + eval(form.warranty1.value) - eval(form.downPay1.value);
+    var pmt1 = 0;
+    var pow1 = 1;
+    for (var j1 = 0; j1 < form.nPer1.value; j1++)
+        pow1 = pow1 * (1 + int1);
+    pmt1 = (prin1 * pow1 * int1) / (eval(pow1) - eval(1));
+		if(form.nPer1.value / 12 <= form.lifeExpect1.value) {form.intCost1.value = parseInt((pmt1 * form.nPer1.value) - prin1,10); } else {
+        var intPort1 = 0;
+        var PrinPort1 = 0;
+        var count1 = 0;
+        var accumPrin1 = 0;
+        var accumInt1 =0;
+
+    while(count1 < form.lifeExpect1.value * 12) {
+           intPort1 = prin1 * int1;
+           prinPort1 = pmt1 - intPort1;
+           prin1 = prin1 - prinPort1;
+           accumPrin1 = accumPrin1 + prinPort1;
+           accumInt1 = accumInt1 + intPort1;
+           count1 = count1 + 1;
+           if(count1 > 600) {break; } else {continue; }
+          }
+
+     form.intCost1.value = parseInt(accumInt1,10);
+       }
+     }
+
+//Operating Costs
+   form.gas1.value = parseInt(form.miles1.value * form.lifeExpect1.value / form.mpg1.value * form.perGal1.value,10);
+
+//Maintenance & Repair Costs
+   form.maintCost1.value = parseInt(form.maint1.value * 12 * form.lifeExpect1.value,10);
+
+//Insurance Costs
+   form.insCost1.value = parseInt(form.insure1.value * form.lifeExpect1.value,10);
+
+//Total Costs #1
+   form.totCost1.value = parseInt(eval(totPurch1) + eval(form.depreCost1.value) + eval(form.intCost1.value) + eval(form.gas1.value) + eval(form.maintCost1.value) + eval(form.insCost1.value),10);
+   form.annCost1.value = parseInt(form.totCost1.value / form.lifeExpect1.value,10);
+   form.mileCost1.value = form.annCost1.value / form.miles1.value;
+
+//Scenario #2
+//100
+//Purchase Costs 2
+   if(form.priceTag2.value == 0) {
+      form.salesTax2.value = form.salesTax1.value;
+      form.warranty2.value = form.warranty1.value;
+      form.license2.value = form.license1.value;
+      form.purchCost2.value = form.purchCost1.value; } else {
+
+   var tax2 = 0;
+   var taxCost2 = 0;
+
+   if(form.salesTax2.value >1) {tax2 = form.salesTax2.value / 100; } else {tax2 = form.salesTax2.value; }
+   if(tax2 > 0) {taxCost2 = form.priceTag2.value * tax2; } else {taxCost2 = 0; }
+
+   var licCost2 = 0;
+   var warCost2 = form.warranty2.value;
+   var totPurch2 = 0;
+
+   licCost2 = form.license2.value * form.lifeExpect2.value;
+   totPurch2 = eval(taxCost2) + eval(licCost2) + eval(warCost2);
+   form.purchCost2.value = totPurch2;
+   }
+
+//Depreciation Costs #2
+     if(form.priceTag2.value == 0) {
+        form.age2.value = form.age1.value;
+        form.lifeExpect2.value = form.lifeExpect1.value;
+        form.depreCost2.value = form.depreCost1.value; } else {
+
+   var timePass2 = eval(form.age2.value);
+   var accumDeprec2 = ageFact[form.age2.value]; 
+
+   while(timePass2 < eval(form.lifeExpect2.value) + eval(form.age2.value) - eval(1)) {
+       timePass2 = eval(timePass2 + 1);
+       accumDeprec2 = accumDeprec2 + ageFact[eval(timePass2 * 1)];
+       if(timePass2 > 50) {break; } else {continue; }
+       }
+
+   form.depreCost2.value = accumDeprec2 / 100 * form.priceTag2.value;
+   }
+
+//Interest Costs #2
+    if(form.priceTag2.value == 0) {
+       form.finance2.value = form.finance1.value;
+       form.intRate2.value = form.intRate1.value;
+       form.downPay2.value = form.downPay1.value;
+       form.nPer2.value = form.nPer1.value;
+       form.intCost2.value = form.intCost1.value; } else {
+
+   if(form.finance2.value == "n" || form.finance2.value == "N" || form.finance2.value == "") {
+       form.downPay2.value = "n/a";
+       form.intRate2.value = "n/a";
+       form.nPer2.value = "n/a";
+       form.intCost2.value = 0; } else {
+   
+    var int2 = form.intRate2.value;
+    if (int2 > 1.0) {int2 = int2 / 100.0; form.intRate2.value = int2; }
+    int2 /= 12;
+    var prin2 = eval(form.priceTag2.value) + eval(taxCost2) + eval(form.license2.value) + eval(form.warranty2.value) - eval(form.downPay2.value);
+    var pmt2 = 0;
+    var pow2 = 1;
+    for (var j2 = 0; j2 < form.nPer2.value; j2++)
+        pow2 = pow2 * (1 + int2);
+    pmt2 = (prin2 * pow2 * int2) / (eval(pow2) - eval(1));
+		if(form.nPer2.value / 12 <= form.lifeExpect2.value) {form.intCost2.value = parseInt((pmt2 * form.nPer2.value) - prin2,10); } else {
+        var intPort2 = 0;
+        var PrinPort2 = 0;
+        var count2 = 0;
+        var accumPrin2 = 0;
+        var accumInt2 =0;
+    while(count2 < form.lifeExpect2.value * 12) {
+           intPort2 = prin2 * int2;
+           prinPort2 = pmt2 - intPort2;
+           prin2 = prin2 - prinPort2;
+           accumPrin2 = accumPrin2 + prinPort2;
+           accumInt2 = accumInt2 + intPort2;
+           count2 = count2 + 1;
+           if(count2 > 600) {break; } else {continue; }
+          }
+       form.intCost2.value = parseInt(accumInt2,10);
+        }
+      }
+    }
+
+//Fuel Costs #2
+   if(form.priceTag2.value == 0) {
+      form.gas2.value = form.gas1.value;
+      form.miles2.value = form.miles1.value;
+      form.perGal2.value = form.perGal1.value;
+      form.mpg2.value = form.mpg1.value; } else {
+
+   form.gas2.value = parseInt(form.miles2.value * form.lifeExpect2.value / form.mpg2.value * form.perGal2.value,10);
+    }
+
+//Maint Costs #2
+   if(form.priceTag2.value == 0) {
+       form.maintCost2.value = form.maintCost1.value;
+       form.maint2.value = form.maint1.value; } else {
+   form.maintCost2.value = parseInt(form.maint2.value * 12 * form.lifeExpect2.value,10);
+   }
+
+//Insurance Costs #2
+   if(form.priceTag2.value == 0) {
+      form.insCost2.value = form.insCost1.value;
+      form.insure2.value = form.insure1.value; } else {
+
+   form.insCost2.value = parseInt(form.insure2.value * form.lifeExpect2.value,10);
+   }
+
+//Total Costs #2
+   if(form.priceTag2.value == 0) {
+      form.totCost2.value = form.totCost1.value;
+      form.annCost2.value = form.annCost1.value;
+      form.priceTag2.value = form.priceTag1.value;
+      form.mileCost2.value = form.mileCost1.value; } else {
+
+   form.totCost2.value = parseInt(eval(totPurch2) + eval(form.depreCost2.value) + eval(form.intCost2.value) + eval(form.gas2.value) + eval(form.maintCost2.value) + eval(form.insCost2.value),10);
+   form.annCost2.value = parseInt(form.totCost2.value / form.lifeExpect2.value,10);
+   form.mileCost2.value = form.annCost2.value / form.miles2.value;
+   }
+
+   var fsummary = 0;
+   var scenario = "";
+
+   if(form.annCost1.value > form.annCost2.value) {
+   fsummary = eval(form.annCost1.value) - eval(form.annCost2.value);
+   scenario = "Scenario #2"; } else {
+   fsummary = eval(form.annCost2.value) - eval(form.annCost1.value);
+   scenario = "Scenario #1"; 
+   }
+
+   form.summary.value = (scenario + " will save you $" + parseInt(fsummary,10) + " per year.");
+}
+
+/*======================================================================
+   clearForm(form)
+   
+   Description: 
+        Clear all fields within the form
+   
+====================================================================== */
+function clearForm(form) {
+    form.priceTag1.value = "";
+    form.salesTax1.value = "";
+    form.warranty1.value = "";
+    form.license1.value = "";
+    form.downPay1.value = "";
+    form.insure1.value = "";
+    form.finance1.value = "";
+    form.intRate1.value = "";
+    form.nPer1.value = "";
+    form.miles1.value = "";
+    form.mpg1.value = "";
+    form.perGal1.value = "";
+    form.maint1.value = "";
+    form.age1.value = "";
+    form.lifeExpect1.value = "";
+    form.purchCost1.value = "";
+    form.depreCost1.value = "";
+    form.intCost1.value = "";
+    form.insCost1.value = "";
+    form.maintCost1.value = "";
+    form.totCost1.value = "";
+    form.annCost1.value = "";
+    form.mileCost1.value = "";
+    form.priceTag2.value = "";
+    form.salesTax2.value = "";
+    form.warranty2.value = "";
+    form.license2.value = "";
+    form.finance2.value = "";
+    form.downPay2.value = "";
+    form.insure2.value = "";
+    form.intRate2.value = "";
+    form.nPer2.value = "";
+    form.miles2.value = "";
+    form.mpg2.value = "";
+    form.perGal2.value = "";
+    form.maint2.value = "";
+    form.age2.value = "";
+    form.lifeExpect2.value = "";
+    form.purchCost2.value = "";
+    form.depreCost2.value = "";
+    form.intCost2.value = "";
+    form.insCost2.value = "";
+    form.maintCost2.value = "";
+    form.totCost2.value = "";
+    form.annCost2.value = "";
+    form.mileCost2.value = "";
+    form.summary.value = "";
+}
+<!-- done hiding from old browsers -->
+</script>
+
+<title>JavaFILE</title>
+<base target="leftframe">
+</head>
+
+<body TEXT="#4C0000" BGCOLOR="#FFFFFF" LINK="#0000FF" VLINK="#551A8B" ALINK="#0000FF"
+onLoad="init()">
+<font FACE="arial,helvetica" SIZE="-1">
+
+<h1 ALIGN="CENTER"><img src="http://www.javafile.com/images/banner.GIF"
+alt="banner.GIF (2826 bytes)"></h1>
+
+<p ALIGN="CENTER"></font><font FACE="arial,helvetica" COLOR="#4C0000" size="4"><strong>Car
+Cost Comparison Calculator</strong></font><font FACE="arial,helvetica" SIZE="-1"></p>
+
+<p><font FACE="arial,helvetica" COLOR="#4C0000"><b>When buying a car most people fail to
+consider ALL of the expenses that will be generated by their purchase. And because nearly
+all car buying scenarios come with different variables (depreciation rates, interest
+rates, purchase prices, insurance costs, mpg ratings, etc.), it becomes extremely
+difficult to compare one buying scenario with another... until now that is. This
+calculator will not only help you to forecast the REAL COST of buying and owning a car,
+but it will also help you to more accurately compare the real cost of one car buying
+scenario with the real cost of a second car buying scenario.</b></font></p>
+
+<p align="center"></font><font size="3">Author: <a href="mailto:webmaster@webwinder.com">Daniel
+C. Peterson</a>&nbsp;&nbsp; <a href="http://www.javafile.com/javascripts/clocks/calc2.zip">Download
+the Script</a></font><font FACE="arial,helvetica" SIZE="-1"></p>
+
+<p align="center"></font><strong><font size="3">NOTE: For non-commercial use only. If you
+wish to use this script on a commercial site, please contact the author.</font></strong><font
+FACE="arial,helvetica" SIZE="-1"></p>
+
+<form method="POST">
+  <div align="center"><center><p>Shortcut: Fill in all the blanks in the Scenario #1 column
+  and then click on<br>
+  &quot;Compute Purchase &amp; Ownership Costs.&quot; This will automatically<br>
+  copy Scenario #1 values into the Scenario #2 column.</p>
+  </center></div><div align="center"><center><table BORDER="4">
+    <tr>
+      <td BGCOLOR="#4C0000"><div align="center"><center><p><font COLOR="#FFFFFF" SIZE="+3">Car
+      Cost Comparison Calculator </font></td>
+      <td align="center"><div align="center"><center><p><b>Car Buying<br>
+      Scenario #1</b></td>
+      <td align="center"><div align="center"><center><p><b>Car Buying<br>
+      Scenario #2</b></td>
+    </tr>
+    <tr align="center">
+      <td><b>Enter the total price of the car, including options:</b></td>
+      <td><input TYPE="TEXT" NAME="priceTag1" SIZE="9"></td>
+      <td><input TYPE="TEXT" NAME="priceTag2" SIZE="9"></td>
+    </tr>
+    <tr align="center">
+      <td><b>Enter the applicable sales-tax percentage:</b></td>
+      <td><input TYPE="TEXT" NAME="salesTax1" SIZE="9"></td>
+      <td><input TYPE="TEXT" NAME="salesTax2" SIZE="9"></td>
+    </tr>
+    <tr align="center">
+      <td><b>Enter the annual cost of licensing this vehicle:</b></td>
+      <td><input TYPE="TEXT" NAME="license1" SIZE="9"></td>
+      <td><input TYPE="TEXT" NAME="license2" SIZE="9"></td>
+    </tr>
+    <tr align="center">
+      <td><b>Enter the cost of the extended warranty, if applicable:</b></td>
+      <td><input TYPE="TEXT" NAME="warranty1" SIZE="9"></td>
+      <td><input TYPE="TEXT" NAME="warranty2" SIZE="9"></td>
+    </tr>
+    <tr align="center">
+      <td><b>Will you be financing this vehicle? (&quot;y&quot; or &quot;n&quot;):</b></td>
+      <td><input TYPE="TEXT" NAME="finance1" SIZE="9"></td>
+      <td><input TYPE="TEXT" NAME="finance2" SIZE="9"></td>
+    </tr>
+    <tr align="center">
+      <td><b>Enter the amount of your down-payment:</b></td>
+      <td><input TYPE="TEXT" NAME="downPay1" SIZE="9"></td>
+      <td><input TYPE="TEXT" NAME="downPay2" SIZE="9"></td>
+    </tr>
+    <tr align="center">
+      <td><b>Enter the financing rate (Annual Percentage Rate):</b></td>
+      <td><input TYPE="TEXT" NAME="intRate1" SIZE="9"></td>
+      <td><input TYPE="TEXT" NAME="intRate2" SIZE="9"></td>
+    </tr>
+    <tr align="center">
+      <td><b>Enter the number of months financed:</b></td>
+      <td><input TYPE="TEXT" NAME="nPer1" SIZE="9"></td>
+      <td><input TYPE="TEXT" NAME="nPer2" SIZE="9"></td>
+    </tr>
+    <tr align="center">
+      <td><b>Enter annual insurance premium:</b></td>
+      <td><input TYPE="TEXT" NAME="insure1" SIZE="9"></td>
+      <td><input TYPE="TEXT" NAME="insure2" SIZE="9"></td>
+    </tr>
+    <tr align="center">
+      <td><b>Enter the number of miles you expect to drive this car per year:</b></td>
+      <td><input TYPE="TEXT" NAME="miles1" SIZE="9"></td>
+      <td><input TYPE="TEXT" NAME="miles2" SIZE="9"></td>
+    </tr>
+    <tr align="center">
+      <td><b>Enter the vehicle's estimated Miles Per Gallon rating:</b></td>
+      <td><input TYPE="TEXT" NAME="mpg1" SIZE="9"></td>
+      <td><input TYPE="TEXT" NAME="mpg2" SIZE="9"></td>
+    </tr>
+    <tr align="center">
+      <td><b>Enter the local cost of one gallon of gasoline:</b></td>
+      <td><input TYPE="TEXT" NAME="perGal1" SIZE="9"></td>
+      <td><input TYPE="TEXT" NAME="perGal2" SIZE="9"></td>
+    </tr>
+    <tr align="center">
+      <td><b>How many years old is the car?:</b></td>
+      <td><input TYPE="TEXT" NAME="age1" SIZE="9"></td>
+      <td><input TYPE="TEXT" NAME="age2" SIZE="9"></td>
+    </tr>
+    <tr align="center">
+      <td><b>How many years do you expect to own this car?:</b></td>
+      <td><input TYPE="TEXT" NAME="lifeExpect1" SIZE="9"></td>
+      <td><input TYPE="TEXT" NAME="lifeExpect2" SIZE="9"></td>
+    </tr>
+    <tr align="center">
+      <td><b>Enter an estimated monthly maintenance and repair cost:</b></td>
+      <td><input TYPE="TEXT" NAME="maint1" SIZE="9"></td>
+      <td><input TYPE="TEXT" NAME="maint2" SIZE="9"></td>
+    </tr>
+    <tr align="center">
+      <td><div align="center"><center><p><input TYPE="button"
+      VALUE="Compute Purchase &amp; Ownership Costs" onClick="computeForm(this.form)"> <input
+      TYPE="reset" VALUE="Reset" onClick="clearForm(this.form)"></td>
+      <td align="center">&nbsp;</td>
+      <td align="center">&nbsp;</td>
+    </tr>
+    <tr align="center">
+      <td ALIGN="right"><b>Tax, License, and Extended Warranty Costs:</b></td>
+      <td><input TYPE="TEXT" NAME="purchCost1" SIZE="9"></td>
+      <td><input TYPE="TEXT" NAME="purchCost2" SIZE="9"></td>
+    </tr>
+    <tr align="center">
+      <td ALIGN="right"><b>Depreciation Costs:</b></td>
+      <td><input TYPE="TEXT" NAME="depreCost1" SIZE="9"></td>
+      <td><input TYPE="TEXT" NAME="depreCost2" SIZE="9"></td>
+    </tr>
+    <tr align="center">
+      <td ALIGN="right"><b>Finance Costs:</b></td>
+      <td><input TYPE="TEXT" NAME="intCost1" SIZE="9"></td>
+      <td><input TYPE="TEXT" NAME="intCost2" SIZE="9"></td>
+    </tr>
+    <tr align="center">
+      <td ALIGN="right"><b>Insurance Costs:</b></td>
+      <td><input TYPE="TEXT" NAME="insCost1" SIZE="9"></td>
+      <td><input TYPE="TEXT" NAME="insCost2" SIZE="9"></td>
+    </tr>
+    <tr align="center">
+      <td ALIGN="right"><b>Fuel Costs:</b></td>
+      <td><input TYPE="TEXT" NAME="gas1" SIZE="9"></td>
+      <td><input TYPE="TEXT" NAME="gas2" SIZE="9"></td>
+    </tr>
+    <tr align="center">
+      <td ALIGN="right"><b>Maintenance &amp; Repair Costs:</b></td>
+      <td><input TYPE="TEXT" NAME="maintCost1" SIZE="9"></td>
+      <td><input TYPE="TEXT" NAME="maintCost2" SIZE="9"></td>
+    </tr>
+    <tr align="center">
+      <td ALIGN="right"><b>Total cost of buying and owning the car:</b></td>
+      <td><input TYPE="TEXT" NAME="totCost1" SIZE="9"></td>
+      <td><input TYPE="TEXT" NAME="totCost2" SIZE="9"></td>
+    </tr>
+    <tr align="center">
+      <td ALIGN="right"><b>Annual cost to own and operate this vehicle:</b></td>
+      <td><input TYPE="TEXT" NAME="annCost1" SIZE="9"></td>
+      <td><input TYPE="TEXT" NAME="annCost2" SIZE="9"></td>
+    </tr>
+    <tr align="center">
+      <td ALIGN="right"><b>Cost per mile:</b></td>
+      <td><input TYPE="TEXT" NAME="mileCost1" SIZE="9"></td>
+      <td><input TYPE="TEXT" NAME="mileCost2" SIZE="9"></td>
+    </tr>
+    <tr align="center">
+      <td COLSPAN="3"><div align="center"><center><p><b>Summary: </b><input TYPE="TEXT"
+      NAME="summary" SIZE="60"></td>
+    </tr>
+  </table>
+  </center></div>
+</form>
+</font>
+</body>
+</html>

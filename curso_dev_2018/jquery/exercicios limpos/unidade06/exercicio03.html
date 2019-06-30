@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso jQuery Fundamental</title>
+        
+        <style>
+			#janela { border:1px solid #666; width:200px; height:200px; margin-top:10px }
+		</style>
+        
+        <script src="jquery-3.2.1.min.js"></script>
+        <script>
+
+
+            //$(function(e){
+
+               // $('#botaoazul').on('click',btAzul);
+                //$('#botaovermelho').on('click',btVermelho);
+                //$('#botaoverde').on('click',btVerde);
+
+               // function btAzul(e){
+                   // $('#janela').css('background-color', '#0ff');
+                //};
+
+                //function btVermelho(e){
+                    //$('#janela').css('background-color','#f00');
+               // };
+
+                //function btVerde(e){
+                  //  $('#janela').css('background-color','#0f0');
+               // };
+                //});
+
+
+               
+
+                function aplicarCor(e){
+                
+             
+                $('#janela').css('background-color',e.data.cor2);
+                $('#janela').css('width',e.data.largura2);
+                }
+
+                $(function(){
+
+                    $('#botaoazul').on('click',{cor2:'#00f', largura2:"200px"},aplicarCor);
+                    $('#botaovermelho').on('click',{cor2:'#f00',largura2:"300px"},aplicarCor);
+                    $('#botaoverde').on('click',{cor2:'#0f0',largura2:"400px"},aplicarCor);
+                });
+
+
+
+
+
+	 	</script>        
+    </head>
+    
+    
+
+    <body>
+    	<input type="submit" id="botaoazul" 	value="azul">
+        <input type="submit" id="botaovermelho" value="vermelho">
+        <input type="submit" id="botaoverde" 	value="verde">
+        
+        <div id="janela"></div>
+    </body>
+</html>

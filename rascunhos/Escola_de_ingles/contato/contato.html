@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/estiloc.css">
+	<title>Escola de Inglês</title>
+</head>
+<body>
+
+	<header id="cab">
+		<a href="../home/index.html"><img src="imagens/logo.jpg"></a>
+
+		<div id="midias">
+			<img src="imagens/facebook.png"/>
+			<img src="imagens/twitter.png" id="t"/>
+		</div>
+
+		<nav id="menu">
+			<ul>
+				<li>
+					<a href="../home/index.html" target="self">Home</a>
+				</li>
+			
+				<li>
+					<a href="../modulos/modulos.html" target="self">Módulos</a>
+				</li>
+	
+				<li>
+					<a href="contato.html" target="self">Contatos</a>
+				</li>
+
+				<li>
+					<a href="../midia/midia.html" target="self">Mídia</a>
+				</li>
+			</ul>
+		</nav>
+		
+	</header>
+
+	<br class="fixFloat"/>
+
+	<section id="contato">
+
+		<form name="fcontato" method="post" action="#">
+			<label>Nome</label>
+			<input type="text" maxlegth="50" size="60" name="fnome" autofocus="required">
+
+			<label>Telefone</label>
+			<input type="tel" maxlegth="15" size="20" name="ffone" placeholder="(xx)x xxxx-xxxx" >
+
+			<label>Email</label>
+			<input type="Email" maxlegth="50" size="60" name="femail" required>
+
+			<label>CEP</label>
+			<input type="text" maxlegth="10" size="15" name="fcep" placeholder="xxxxx-xxx" pattern="\d{5}-?\d{3}" required>
+
+			<label>Módulo inicial</label>
+			<input type="number" min="1" max="10" step="1" value="1"name="fmodulo" required>
+
+			<label>Horário inicial</label>
+			<input type="time" value="10:00" step="1800" name="fhora" required>
+
+			<label>Cor da Pasta</label>
+			<input type="color" value="#00ff00" name="fcor" required>
+
+			<label>Data de Nascimento</label>
+			<input type="date"  name="fnasci" required>
+
+			<br/><br/>
+
+			<input type="submit" value="Enviar">
+			<input type="reset" value="Limpar">
+			
+		</form>
+
+	</section>
+
+	<br class="fixFloat"/>
+
+	<footer>
+
+		<p>Layout Curso de Inglês</p> 
+		<p>Canal Fessor Bruno</p>
+		 <p>www.youtube.com.br/canalfessorbrun</p>
+		
+	</footer>
+
+	
+		
+	</body>
+
+	
+	</html>

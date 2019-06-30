@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Aulas de Javascript</title>
+        <script>
+
+        var produto = new Object();
+
+
+        produto = {nome:"Teclado",preco:20.00,cor:"Cinza"}//pode ser usado também desta forma
+        //produto.nome = "Teclado";
+        //produto.preco = 20.00;
+        //produto.cor = "Cinza";
+
+        function retornarValores(){
+
+            return "Produto: " + this.nome + " Preço: " + this.preco + " Cor: " + this.cor;
+        }
+
+
+        produto.info =  retornarValores;
+
+        alert(produto.info());
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

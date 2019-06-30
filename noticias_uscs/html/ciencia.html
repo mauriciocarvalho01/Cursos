@@ -1,0 +1,347 @@
+
+<!--NESSA PÁGINA FOI UTLIZADO CSS PURO(KEYFRAMES) PARA FAZER A ANIMAÇÃO E JAVASCRIPT, JUNTO COM UMA BIBLIOTECA DE PARTICULAS-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="generator" content="visual studio code">
+        <meta name="keywords" content="noticias USCS">
+        <meta name="description" content="noticias USCS">
+        <meta name="aplication-name" content="noticias USCS">
+        <link rel="stylesheet" href="../css/style.css"> 
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> 
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="../js/script.js"></script>  
+        <script src="../js/jquery-3.2.1.min.js"></script>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      
+           
+            
+    
+        
+
+    
+    </head>
+
+    
+    <body>
+        <nav class="navbar navbar-fixed">
+          </div>
+            <div class=" col-sm-4 main-topbar__searchbar-wrapper" id="buscar">
+              <div class="formbuscar" id="formbuscar">
+                  <span class="glyphicon glyphicon-search"></span>
+                <form action="" >
+                    <input type="search" name="buscar" class="main-topbar__searchbar" placeholder="Buscar">
+                </form>
+              </div>
+            </div>
+            <div class=" col-sm-4 main-topbar__pagename-wrapper">
+                <p class="main-topbar__pagename-item">Noticias Escola de Computação USCS</p>
+            </div>
+            <div class=" col-sm-4 main-topbar__item-wrapper" >
+              <div id="criadores" class="botaocriadores">
+                <i class="fas fa-users"></i>Criadores  
+              </div>   
+           </div>
+           <div class="alunos" id="alunos">
+              <button type="button" class="btn btn-primary" id="mauricio">Mauricio</button>
+              <button type="button" class="btn btn-primary" id="bruna">Bruna</button>
+              <button type="button" class="btn btn-primary" id="andre">Andre</button>
+              <button type="button" class="btn btn-primary" id="enzo">Enzo</button>
+              <button type="button" class="btn btn-primary" id="allyson">Marcelo</button>
+            </div>
+            <div class=" col-sm-12 main-topbar__searchbar-wrapper">
+              <div id="logo" class="iconUSCS">
+                <img src="../imagens/iconUSCS.jpg">
+              </div>
+            </div>
+            
+ </nav>
+
+<!--FIM MENU SUPERIOR-->
+
+<div class="page-wrapper chiller-theme toggled">
+    <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
+      <i class="fas fa-bars"></i>
+    </a>
+    <nav id="sidebar" class="sidebar-wrapper">
+      <div class="sidebar-content">
+        <div class="sidebar-brand">
+          <div id="close-sidebar">
+            <i class="fas fa-times"></i>
+          </div>
+        </div>
+        <!-- sidebar-header  -->
+        <div class="sidebar-search">
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <div class="input-group">
+              <input type="text" class="form-control search-menu" placeholder="Buscar">
+            </div>
+        </div>
+        <!-- sidebar-search  -->
+        <div class="sidebar-menu">
+          <ul>
+            <li class="header-menu">
+              <span>Geral</span>
+            </li>
+            <li class="sidebar-dropdown">
+              <a href="#">
+                <i class="fas fa-laptop-code"></i>
+                <span>Programação</span>
+                
+                <span class="badge badge-pill badge-warning">Novo</span>
+              </a>
+              <div class="sidebar-submenu">
+                <ul>
+                  <li>
+                    <a href="#">Linguagens
+                      <span class="badge badge-pill badge-success">Pro</span>
+                    </a>
+                  </li>
+                  <li>
+                      <a href="#">Machine learning</a>
+                 </li>
+                    <li>
+                      <a href="#">Big Data</a>
+                    </li>
+                    <li>
+                      <a href="#">Banco de Dados</a>
+                    </li>
+                    <li>
+                      <a href="#">IOT</a>
+                    </li>
+                    <li>
+                      <a href="#">Inteligencia Artificial</a>
+                    </li>
+                    <li>
+                      <a href="#">Outros</a>
+                    </li>
+                </ul>
+              </div>
+            </li>
+            <li class="sidebar-dropdown">
+              <a href="#">
+                  <i class="fas fa-robot"></i>
+                <span>Tecnologia</span>
+                <span class="badge badge-pill badge-danger">3</span>
+              </a>
+              <div class="sidebar-submenu">
+                <ul>
+                  <li>
+                    <a href="index.html">Mais lidas
+  
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">Hardware</a>
+                  </li>
+                  <li>
+                    <a href="#">Software</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="sidebar-dropdown">
+              <a href="#">
+                <i class="fas fa-gamepad"></i>
+                <span>Games</span>
+              </a>
+              <div class="sidebar-submenu">
+                <ul>
+                  <li>
+                    <a href="#">Console</a>
+                  </li>
+                  <li>
+                    <a href="#">PC</a>
+                  </li>
+                  <li>
+                    <a href="#">Celular</a>
+                  </li>
+                  <li>
+                    <a href="#">Lançamentos</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="sidebar-dropdown">
+              <a href="#">
+                <i class="fab fa-youtube"></i>
+                <span>USCStube</span>
+              </a>
+              <div class="sidebar-submenu">
+                <ul>
+                  <li>
+                    <a href="uscstube.html">Videos</a>
+                  </li>
+                  <li>
+                    <a href="#">Músicas</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="sidebar-dropdown">
+              <a href="#">
+                <i class="fa fa-globe"></i>
+                <span>Mundo</span>
+              </a>
+              <div class="sidebar-submenu">
+                <ul>
+                  <li>
+                    <a href="#">Inovação</a>
+                  </li>
+                  <li>
+                    <a href="ciencia.html">Ciência</a>
+                  </li>
+                  <li>
+                    <a href="curiosidades.html">Curiosidades</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="header-menu">
+              <span>Sobre</span>
+            </li>
+            <li>
+              <a href="http://www.uscs.edu.br/cursos-de-graduacao/escola-de-computacao/ciencia-da-computacao/">
+    
+                    <img src="../imagens/escola_politecnica.jpg">
+         
+                <span>Escola Politécnica</span>
+                <span class="badge badge-pill badge-primary">Visite</span>
+              </a>
+            </li>
+            <li>
+              <a href="http://www.uscs.edu.br/">
+                  <i><img  src="../imagens/logoUSCS.jpg"></i>
+                <span>USCS</span>
+              </a>
+            </li>
+            <li>
+              <a href="http://noticias.uscs.edu.br/">
+                  <i><img src="../imagens/logo01.jpg"></i>
+                <span>Escola da Computação</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- sidebar-menu  -->
+      </div>
+      <!-- sidebar-content  -->
+      <div class="sidebar-footer">
+        <a href="#">
+          <i class="fa fa-bell"></i>
+          <span class="badge badge-pill badge-warning notification">3</span>
+        </a>
+        <a href="#">
+          <i class="fa fa-envelope"></i>
+          <span class="badge badge-pill badge-success notification">7</span>
+        </a>
+        <a href="#">
+          <i class="fa fa-cog"></i>
+          <span class="badge-sonar"></span>
+        </a>
+        <a href="#">
+          <i class="fa fa-power-off"></i>
+        </a>
+      </div>
+    </nav>
+
+    <!--FIM MENU LATERAL-->
+
+
+
+        <div class="container-fluid">
+          <!--local-->
+     <div class="local">
+        <span class="locali"><i class="fas fa-angle-double-left"></i>Voltar</span>
+        <span><i class="fas fa-angle-double-right"></i>Ciência</span>
+    </div>
+            <div class="container sumir frase" id="particles-js">
+                <h3 id="frase">"O segredo da criatividade é saber como esconder as fontes."
+                    Albert Einstein
+                </h3>  
+                <h3 id="frase" class="frase2">"O segredo da criatividade é saber como esconder as fontes."
+                    Albert Einstein
+                </h3>    
+                <h3 id="frase1" class="frase1">"O segredo da criatividade é saber como esconder as fontes."
+                  Albert Einstein
+              </h3>                
+              </div>
+          <!-- Footer -->
+
+  <div id="footer">
+      <div class="container well foot">
+          <h2 class="footertext"><center>Sobre:</center></h2>
+        </div>
+      <div class="container">
+          <div class="row">
+             
+                <div class="col-md-4">
+                  <center>
+                    <img src="../imagens/footerlogoUSCS.jpg" class="img-circle" alt="the-brains">
+                    <br>
+                    <h4 class="footertext">USCS</h4>
+                    <p class="footertext">Universidade de São Caetano do Sul.<br>
+                  </center>
+                </div>
+                <div class="col-md-4">
+                  <center>
+                    <img src="../imagens/logoc.jpg" class="img-circle" alt="...">
+                    <br>
+                    <h4 class="footertext">Escola de Computação</h4>
+                    <p class="footertext">Ciência da Computação.<br>
+                  </center>
+                </div>
+                <div class="col-md-4">
+                  <center>
+                    <img src="../imagens/escola_polite.jpg" class="img-circle" alt="...">
+                    <br>
+                    <h4 class="footertext">Escola Politécnica</h4>
+                    <p class="footertext">Campus Conceição.<br>
+                  </center>
+                </div>
+              </div>
+              <div class="row">
+                <div class="contato">
+                    <p><a href="#">Contato</a><p><br>
+                      <div class="cop">
+                          <p class="footertext">Copyright 2019</p>
+                      </div>
+                </div>
+               
+                
+             </div>
+      </div>
+  </div>
+        </div>
+
+            
+                  
+       
+               
+              
+ 
+
+                          
+    
+
+            <script src="../js/script.js"></script>
+            <script src="../js/jquery-2.1.3.min.js"></script>
+            <script type="text/javascript" src="../js/particles.min.js"></script>
+            <script type="text/javascript" src="../js/app.js"></script>
+            <script src="https://apis.google.com/js/client.js?onload=init"></script>
+            <!-- scripts -->
+            <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+            <script src="https://apis.google.com/js/client.js?onload=init"></script>
+
+           
+    </body>
+</html>

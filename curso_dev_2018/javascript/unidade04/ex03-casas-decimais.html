@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>Aulas de Javascript</title>
+        <script>
+
+
+            function calcularDollar1(valorConverter){
+
+                var dollar = 3.451;
+                var valorConvertido1 = Math.round(valorConverter * dollar);
+               
+                return alert(valorConvertido1);
+                 
+            }
+                //Math.round arredonda pra media
+        		
+        function calcularDollar2(valorConverter){
+
+                var dollar = 3.91;
+               
+                var valorConvertido2 = Math.ceil(valorConverter * dollar);
+               
+
+                return alert(valorConvertido2);
+                
+        
+            }
+
+               //Math.ceil arredeonda sempre pra cima
+        	function calcularDollar3(valorConverter){
+
+                var dollar = 3.91;
+               
+                var valorConvertido3 = Math.floor(valorConverter * dollar);
+
+               
+                 return alert(valorConvertido3);
+                  
+            }
+               //Math.floor sempre arredonda pra baixo
+
+              
+
+               function casasDec(dollar){
+                
+                var decimais =  dollar.toFixed(1);
+
+                return alert(decimais);
+
+               }
+                // To.fixed(n) configura as casas decimais
+        	
+        </script>
+    </head>
+    <body>
+        
+
+        <button onclick = "calcularDollar1(1)">click</button>
+        <button onclick = "calcularDollar2(1)">click</button> 
+        <button onclick = "calcularDollar3(1)">click</button>
+        <button onclick = "casasDec(3.91)">click</button>
+
+        
+    </body>
+
+</html>

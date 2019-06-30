@@ -1,0 +1,218 @@
+<!--<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>SuperMercado</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="js/bootstrap.min.js">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+
+
+</head>
+
+<body>
+
+
+     <section class="container-fluid">
+         <div class="container">
+            <div class="frontFila col-sm-12 col-md-6 col-lg-6">
+                <div class="monitor">
+                    <img src="imagens/monitor.png">
+                    <form action="processarCaixa.jsp" method="post"> 
+                            <div class="opcoes">
+                                    <div class="opcao1 col-md-4"  >
+                                            <input type="checkbox" name=""  id="opc1">
+                                            <p class="jurosSimples">Caixa 1</p>
+                                    </div>
+                                   
+                                    <div class="opcao2 col-md-4"   >
+                                            <input type="checkbox" name="" id="opc2"> 
+                                            <p class="jurosComposto">Caixa 2</p>
+                                    </div>
+                                    <div class="opcao3 col-md-4" >
+                                            <input type="checkbox" name="" id="opc3" >
+                                            <p class="jurosSimples">Caixa 3</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="categorias col-md-12">
+                                        <div class="col-sm-12 col-md-6 col-lg-6">
+                                                <label class="inputText" id="desc" for="capacidade">Capacidade de atendtimento</label>
+                                            <input type="text"  list="capacidade" name="capacidade" id="capacidade" class="input">
+                                        </div> 
+                                        <div class="col-sm-12 col-md-6 col-lg-6">
+                                                <label class="inputText" for="Idprodutos">ID do produto</label>
+                                            <input type="text"  list="Idprodutos" name="Idprodutos" id="Iprodutos" class="input">
+                                        </div>   
+                                        <div  class="col-sm-12 col-md-6 col-lg-4">
+                                                <div class="inputBox">
+                                                        <label class="inputText" for="produto">Produto</label>
+                                                    <input type="text"  list="produtos" name="produto" id="produto" class="input">
+                                                  <datalist id="produtos">
+                                                   <option value="Apple Iphone">Apple Iphone</option>
+                                                   <option value="Alcatel">Alcatel</option>
+                                                   <option value="Asus">Asus</option>
+                                                   <option value="Blu">Blu</option>
+                                                   <option value="Cce">Cce</option>
+                                                   <option value="Motorola Lenovo">Motorola Lenovo</option>
+                                                   <option value="Nokia">Nokia</option>
+                                                   <option value="Microsoft">Microsoft</option>
+                                                   <option value="Sony">Sony</option>
+                                                   <option value="Sansung">Sansung</option>
+                                                   <option value="Windows Fone">Windows Fone</option>
+                                                   <option value="Xiaomi">Xiaomi</option>
+                                                   <option value="ZTE">ZTE</option>
+                                                   <option value="Outros">Outros</option>
+                                                   </datalist>
+                                               </div>   
+                                        </div>
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                                <label class="inputText" for="preco">Preço</label>
+                                            <input type="text"  list="precos" name="precos" id="precos" class="input inicial">
+                                        </div>  
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                                <label class="inputText" for="qtd">Quantidade</label>
+                                            <input type="text"  list="qtds" name="qtds" id="qtds" class="input">
+                                        </div>  
+                                </div>
+                                <input type="submit" class="btn btn-primary" value="Enviar">
+                        </form>
+                </div>
+                
+                <div class="clientes">
+                        <div class="fila1" id="fila1">
+                            <ul>
+                                <li>
+                                        <i class="fas fa-female"></i>
+                                        <i class="fas fa-shopping-cart"></i>
+                                </li>
+                                <li>
+                                        <i class="fas fa-walking"></i>
+                                        <i class="fas fa-shopping-cart"></i>
+                                        
+                                </li>
+                                <li>
+                                        <i class="fas fa-male"></i>
+                                        <i class="fas fa-shopping-cart"></i>
+                                </li>
+                                <li>
+                                        <i class="fas fa-female"></i>
+                                        <i class="fas fa-shopping-cart"></i>
+                                </li>
+                                <li>
+                                        <i class="fas fa-female"></i>
+                                        <i class="fas fa-shopping-cart"></i>
+                                </li>
+                                <li>
+                                        <i class="fas fa-male"></i>
+                                        <i class="fas fa-shopping-cart"></i>
+                                        
+                                </li>
+                                <li>
+                                        <i class="fas fa-walking"></i>
+                                        <i class="fas fa-shopping-cart"></i>
+                                        
+                                </li>
+                                
+                            </div>
+                            <div class="fila2" id="fila2">
+                                    <ul>
+                                            
+                                        <li>
+                                                <i class="fas fa-female"></i>
+                                                <i class="fas fa-shopping-cart"></i>
+                                        </li>
+                                        <li>
+                                                <i class="fas fa-walking"></i>
+                                                <i class="fas fa-shopping-cart"></i>
+                                                
+                                        </li>
+                                        <li>
+                                                <i class="fas fa-male"></i>
+                                                <i class="fas fa-shopping-cart"></i>
+                                        </li>
+                                        <li>
+                                                <i class="fas fa-female"></i>
+                                                <i class="fas fa-shopping-cart"></i>
+                                        </li>
+                                        <li>
+                                                <i class="fas fa-female"></i>
+                                                <i class="fas fa-shopping-cart"></i>
+                                        </li>
+                                        <li>
+                                                <i class="fas fa-male"></i>
+                                                <i class="fas fa-shopping-cart"></i>
+                                                
+                                        </li>
+                                        <li>
+                                                <i class="fas fa-female"></i>
+                                                <i class="fas fa-shopping-cart"></i>
+                                        </ul>
+                                    </div>
+                                <div class="fila3" id="fila3">
+                                 <ul>
+                                    <li>
+                                            <i class="fas fa-female"></i>
+                                            <i class="fas fa-shopping-cart"></i>
+                                    </li>
+                                    <li>
+                                            <i class="fas fa-walking"></i>
+                                            <i class="fas fa-shopping-cart"></i>
+                                            
+                                    </li>
+                                    <li>
+                                            <i class="fas fa-walking"></i>
+                                            <i class="fas fa-shopping-cart"></i>
+                                    </li>
+                                    <li>
+                                            <i class="fas fa-female"></i>
+                                            <i class="fas fa-shopping-cart"></i>
+            
+                                    <li>
+                                            <i class="fas fa-female"></i>
+                                            <i class="fas fa-shopping-cart"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-male"></i>
+                                        <i class="fas fa-shopping-cart"></i>
+                                                        
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-female"></i>
+                                        <i class="fas fa-shopping-cart"></i>
+                                     </li>         
+                                </ul>
+                            </div>
+                        </div>
+                   
+              </div>
+            <div class="backFila col-sm-12 col-md-6 col-lg-6">
+            
+            </div>
+         </div>    
+     </section> 
+
+     <script>
+         /*mascara no preço*/
+
+            
+                $(function(){
+                    $('.inicial').maskMoney({prefix:'R$ ', allowNegative: true, thousands:'.', decimal:','}); 
+                });
+           
+        
+           
+     </script>
+
+
+ <!-- Fim do seu codigo -->
+
+ <script src="js/jquery.js"></script>
+ <script src="js/bootstrap.min.js"></script>
+ <script src="js/script.js"></script>
+</body>
+</html>

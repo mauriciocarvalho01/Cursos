@@ -1,0 +1,570 @@
+
+<!--PÁGINA INICIAL, RESPONSÁVEL POR TRAZER AS NOTICIAS MAIS LIDAS DA SEMANA
+FOI USADO BOOTSTRAP NO MENU NO SLIDESHOW E RESPONSIVIDADE , O LINK ESTÁ
+NO MENU LATERAL-- 'TECNOLOGIA'--'MAIS LIDAS'--> 
+
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="generator" content="visual studio code">
+        <meta name="keywords" content="noticias USCS">
+        <meta name="description" content="noticias USCS">
+        <meta name="aplication-name" content="noticias USCS">
+        <link rel="stylesheet" href="../css/style.css"> 
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> 
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="../js/script.js"></script>  
+        <script src="../js/jquery-3.2.1.min.js"></script>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+       
+        <script>
+
+            $(document).ready(function(){
+              Swal.fire({
+                title: 'Notícias retiradas do portal Tecmundo',
+                text: 'Site criado para fins didáticos',
+                imageUrl: '../imagens/tecnmundo.jpg',
+                imageWidth: 400,
+                imageHeight: 400,
+                imageAlt: 'Custom image',
+                animation: true
+             })
+            });
+          </script>
+  
+
+    
+    </head>
+
+
+    <body>
+
+<nav class="navbar navbar-fixed">
+          </div>
+            <div class=" col-sm-4 main-topbar__searchbar-wrapper" id="buscar">
+              <div class="formbuscar formbusca" id="formbuscar">
+                  <span class="glyphicon glyphicon-search"></span>
+                <form action="" >
+                    <input type="search" name="buscar" class="main-topbar__searchbar" placeholder="Buscar">
+                </form>
+              </div>
+            </div>
+            <div class=" col-sm-4 main-topbar__pagename-wrapper">
+                <span class="main-topbar__pagename-item">Noticias Escola de Computação USCS</span>
+            </div>
+            <div class=" col-sm-4 main-topbar__item-wrapper" >
+              <div id="criadores" class="botaocriadores botaocriadors">
+                <i class="fas fa-users"></i>Criadores
+              </div>  
+           </div>
+           <div class="alunos" id="alunos">
+              <button type="button" class="btn btn-primary" id="mauricio">Mauricio</button>
+              <button type="button" class="btn btn-primary" id="bruna">Bruna</button>
+              <button type="button" class="btn btn-primary" id="andre">Andre</button>
+              <button type="button" class="btn btn-primary" id="enzo">Enzo</button>
+              <button type="button" class="btn btn-primary" id="allyson">Marcelo</button>
+            </div>
+            <div class=" col-sm-12 main-topbar__searchbar-wrapper">
+              <div id="logo" class="iconUSCS">
+                <img src="../imagens/iconUSCS.jpg">
+              </div>
+            </div>
+            
+ </nav>
+
+<!--FIM MENU SUPERIOR-->
+
+<div class="page-wrapper chiller-theme toggled">
+    <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
+      <i class="fas fa-bars"></i>
+    </a>
+    <nav id="sidebar" class="sidebar-wrapper">
+      <div class="sidebar-content">
+        <div class="sidebar-brand">
+          <div id="close-sidebar">
+            <i class="fas fa-times"></i>
+          </div>
+        </div>
+        <!-- sidebar-header  -->
+        <div class="sidebar-search">
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <div class="input-group">
+              <input type="text" class="form-control search-menu" placeholder="Buscar">
+            </div>
+        </div>
+        <!-- sidebar-search  -->
+        <div class="sidebar-menu">
+          <ul>
+            <li class="header-menu">
+              <span>Geral</span>
+            </li>
+            <li class="sidebar-dropdown">
+              <a href="#">
+                <i class="fas fa-laptop-code"></i>
+                <span>Programação</span>
+                
+                <span class="badge badge-pill badge-warning">Novo</span>
+              </a>
+              <div class="sidebar-submenu">
+                <ul>
+                  <li>
+                    <a href="#">Linguagens
+                      <span class="badge badge-pill badge-success">Pro</span>
+                    </a>
+                  </li>
+                  <li>
+                      <a href="#">Machine learning</a>
+                 </li>
+                    <li>
+                      <a href="#">Big Data</a>
+                    </li>
+                    <li>
+                      <a href="#">Banco de Dados</a>
+                    </li>
+                    <li>
+                      <a href="#">IOT</a>
+                    </li>
+                    <li>
+                      <a href="#">Inteligencia Artificial</a>
+                    </li>
+                    <li>
+                      <a href="#">Outros</a>
+                    </li>
+                </ul>
+              </div>
+            </li>
+            <li class="sidebar-dropdown">
+              <a href="#">
+                  <i class="fas fa-robot"></i>
+                <span>Tecnologia</span>
+                <span class="badge badge-pill badge-danger">3</span>
+              </a>
+              <div class="sidebar-submenu">
+                <ul>
+                  <li>
+                    <a href="index.html">Mais lidas
+  
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">Hardware</a>
+                  </li>
+                  <li>
+                    <a href="#">Software</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="sidebar-dropdown">
+              <a href="#">
+                <i class="fas fa-gamepad"></i>
+                <span>Games</span>
+              </a>
+              <div class="sidebar-submenu">
+                <ul>
+                  <li>
+                    <a href="#">Console</a>
+                  </li>
+                  <li>
+                    <a href="games.html">PC</a>
+                  </li>
+                  <li>
+                    <a href="#">Celular</a>
+                  </li>
+                  <li>
+                    <a href="#">Lançamentos</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="sidebar-dropdown">
+              <a href="#">
+                <i class="fab fa-youtube"></i>
+                <span>USCStube</span>
+              </a>
+              <div class="sidebar-submenu">
+                <ul>
+                  <li>
+                    <a href="uscstube.html">Videos</a>
+                  </li>
+                  <li>
+                    <a href="#">Músicas</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="sidebar-dropdown">
+              <a href="#">
+                <i class="fa fa-globe"></i>
+                <span>Mundo</span>
+              </a>
+              <div class="sidebar-submenu">
+                <ul>
+                  <li>
+                    <a href="#">Inovação</a>
+                  </li>
+                  <li>
+                    <a href="ciencia.html">Ciência</a>
+                  </li>
+                  <li>
+                    <a href="curiosidades.html">Curiosidades</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="header-menu">
+              <span>Sobre</span>
+            </li>
+            <li>
+              <a href="http://www.uscs.edu.br/cursos-de-graduacao/escola-de-computacao/ciencia-da-computacao/">
+    
+                    <img src="../imagens/escola_politecnica.jpg">
+         
+                <span>Escola Politécnica</span>
+                <span class="badge badge-pill badge-primary">Visite</span>
+              </a>
+            </li>
+            <li>
+              <a href="http://www.uscs.edu.br/">
+                  <i><img  src="../imagens/logoUSCS.jpg"></i>
+                <span>USCS</span>
+              </a>
+            </li>
+            <li>
+              <a href="http://noticias.uscs.edu.br/">
+                  <i><img src="../imagens/logo01.jpg"></i>
+                <span>Escola da Computação</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- sidebar-menu  -->
+      </div>
+      <!-- sidebar-content  -->
+      <div class="sidebar-footer">
+        <a href="#">
+          <i class="fa fa-bell"></i>
+          <span class="badge badge-pill badge-warning notification">3</span>
+        </a>
+        <a href="#">
+          <i class="fa fa-envelope"></i>
+          <span class="badge badge-pill badge-success notification">7</span>
+        </a>
+        <a href="#">
+          <i class="fa fa-cog"></i>
+          <span class="badge-sonar"></span>
+        </a>
+        <a href="#">
+          <i class="fa fa-power-off"></i>
+        </a>
+      </div>
+    </nav>
+
+        
+    <!--FIM MENU LATERAL-->
+
+
+
+
+  <div class="container-fluid">
+     <!--local-->
+     <div class="local">
+        <span class="locali"><i class="fas fa-angle-double-left"></i>Voltar</span>
+        <span><i class="fas fa-angle-double-right"></i>Mais lidas</span>
+    </div>
+    <div class="container cta-100 ">
+      <div class="container">
+        <div class="row blog">
+          <div class="col-md-12">
+            <div id="blogCarousel" class="carousel slide container-blog" data-ride="carousel">
+               <ol class="carousel-indicators">
+                  <li data-target="#blogCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#blogCarousel" data-slide-to="1"></li>
+                </ol>
+              <!-- Carousel items -->
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="row">
+                    <div class="col-md-4" >
+                      <div class="item-box-blog">
+                        <div class="item-box-blog-image">
+                          <!--Date-->
+                          <div class="item-box-blog-date bg-blue-ui white"> <span class="mon">05 Maio</span> </div>
+                          <!--Image-->
+                          <figure> <img alt="" src="../imagens/musk.jpg"> </figure>
+                        </div>
+                        <div class="item-box-blog-body">
+                          <!--Heading-->
+                          <div class="item-box-blog-heading">
+                            <a href="https://www.tecmundo.com.br/internet/140686-entenda-problema-elon-musk.htm" tabindex="0">
+                              <h4>Entenda: afinal, qual é o problema com Elon Musk?</h4>
+                            </a>
+                          </div>
+                          <!--Data-->
+                          <div class="item-box-blog-data" style="padding: px 15px;">
+                            <p><i class="fa fa-user-o"></i> Admin, <i class="fa fa-comments-o"></i> Comentários(10)</p>
+                          </div>
+                          <!--Text-->
+                          <div class="item-box-blog-text">
+                            <p>Se você conhece um pouco sobre a Tesla,
+                               a mais famosa montadora de carros elétricos hoje em dia, 
+                              ou se está ligado nos grandes avanços da área de exploração espacial da SpaceX, 
+                              provavelmente sabe quem é Elon Musk. Acontece que o gênio, bilionário, playboy,
+                               filantropo, mas que ainda não é o Homem de Ferro, está sempre envolvido em uma bela polêmica...</p>
+                          </div>
+                          <div class="mt"> <a href="https://www.tecmundo.com.br/internet/140686-entenda-problema-elon-musk.htm" tabindex="0" class="btn bg-blue-ui white read">Leia mais...</a> </div>
+                          <!--Read More Button-->
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4" >
+                      <div class="item-box-blog">
+                        <div class="item-box-blog-image">
+                          <!--Date-->
+                          <div class="item-box-blog-date bg-blue-ui white"> <span class="mon">06 Maio</span> </div>
+                          <!--Image-->
+                          <figure> <img alt="" src="../imagens/tv.jpg"> </figure>
+                        </div>
+                        <div class="item-box-blog-body">
+                          <!--Heading-->
+                          <div class="item-box-blog-heading">
+                            <a href="https://www.tecmundo.com.br/produto/140685-smart-tv-monstro-8k-98-polegadas-sony-sai-bagatela-us-70-mil.htm" tabindex="0">
+                              <h4>Smart TV monstro 8K de 98 polegadas da Sony sai pela bagatela de US$ 70 mil</h4>
+                            </a>
+                          </div>
+                          <!--Data-->
+                          <div class="item-box-blog-data" style="padding: px 15px;">
+                            <p><i class="fa fa-user-o"></i> Admin, <i class="fa fa-comments-o"></i> Comentários(5)</p>
+                          </div>
+                          <!--Text-->
+                          <div class="item-box-blog-text">
+                            <p>Não basta ter 4K, o negócio agora é 8K.
+                               E quem quiser o que há de mais avançado quando falamos
+                                em smart TVs terá que desembolsar uma pequena fortuna:
+                                 A Sony anunciou sua nova top de linha para 2019 com nada menos do que 98 polegadas
+                                  ao custo de US$ 70 mil (quase R$ 278 mil na conversão direta)...</p>
+                          </div>
+                          <div class="mt"> <a href="https://www.tecmundo.com.br/produto/140685-smart-tv-monstro-8k-98-polegadas-sony-sai-bagatela-us-70-mil.htm" tabindex="0" class="btn bg-blue-ui white read">Leia mais...</a> </div>
+                          <!--Read More Button-->
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4" >
+                      <div class="item-box-blog">
+                        <div class="item-box-blog-image">
+                          <!--Date-->
+                          <div class="item-box-blog-date bg-blue-ui white"> <span class="mon">03 Maio</span> </div>
+                          <!--Image-->
+                          <figure> <img alt="" src="../imagens/patinete.jpg"> </figure>
+                        </div>
+                        <div class="item-box-blog-body">
+                          <!--Heading-->
+                          <div class="item-box-blog-heading">
+                            <a href="https://www.tecmundo.com.br/seguranca/140712-patinetes-hackeadas-saem-ai-distribuindo-ofensas-sexuais.htm" tabindex="0">
+                              <h4>Patinetes são hackeadas e saem por aí distribuindo ofensas sexuais</h4>
+                            </a>
+                          </div>
+                          <!--Data-->
+                          <div class="item-box-blog-data" style="padding: px 15px;">
+                            <p><i class="fa fa-user-o"></i> Admin, <i class="fa fa-comments-o"></i> Comentários(26)</p>
+                          </div>
+                          <!--Text-->
+                          <div class="item-box-blog-text">
+                            <p>Imagine-se usando uma dessas novas patinetes para percorrer pequenas distâncias e,
+                               ao encerrar sua corrida, a máquina começar a proferir ofensas sexuais. 
+                               Foi isso o que aconteceu com algumas scooters da Lime em Brisbane, 
+                              na Austrália. Elas foram hackeadas para transmitir mensagens de áudio, digamos, “boca-suja”.</p>
+                          </div>
+                          <div class="mt"> <a href="https://www.tecmundo.com.br/seguranca/140712-patinetes-hackeadas-saem-ai-distribuindo-ofensas-sexuais.htm" tabindex="0" class="btn bg-blue-ui white read">Leia mais...</a> </div>
+                          <!--Read More Button-->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--.row-->
+                </div>
+                <!--.item-->
+                <div class="carousel-item ">
+                  <div class="row">
+                    <div class="col-md-4" >
+                      <div class="item-box-blog">
+                        <div class="item-box-blog-image">
+                          <!--Date-->
+                          <div class="item-box-blog-date bg-blue-ui white"> <span class="mon">05 Maio</span> </div>
+                          <!--Image-->
+                          <figure> <img alt="" src="../imagens/xenon.jpg"> </figure>
+                        </div>
+                        <div class="item-box-blog-body">
+                          <!--Heading-->
+                          <div class="item-box-blog-heading">
+                            <a href="https://www.tecmundo.com.br/ciencia/140908-buscando-materia-escura-cientistas-flagram-evento-raro-registrado.htm" tabindex="0">
+                              <h4>Buscando matéria escura, cientistas flagram evento mais raro já registrado</h4>
+                            </a>
+                          </div>
+                          <!--Data-->
+                          <div class="item-box-blog-data" style="padding: px 15px;">
+                            <p><i class="fa fa-user-o"></i> Admin, <i class="fa fa-comments-o"></i>Comentários(9)</p>
+                          </div>
+                          <!--Text-->
+                          <div class="item-box-blog-text">
+                            <p>Em sua busca por matéria escura, o projeto XENON, que conta com mais de 160 cientistas e tem sede na Itália, 
+                              com um laboratório aproximadamente 1,5 km abaixo do solo das montanhas Gran Sasso, 
+                              observou um fenômeno cujo processo só pode ser completado em 1 trilhão de vezes mais tempo que a existência 
+                              do próprio Universo, que tem quase 14 bilhões de anos.</p>
+                          </div>
+                          <div class="mt"> <a href="https://www.tecmundo.com.br/ciencia/140908-buscando-materia-escura-cientistas-flagram-evento-raro-registrado.htm" tabindex="0" class="btn bg-blue-ui white read">Leia mais...</a> </div>
+                          <!--Read More Button-->
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4" >
+                      <div class="item-box-blog">
+                        <div class="item-box-blog-image">
+                          <!--Date-->
+                          <div class="item-box-blog-date bg-blue-ui white"> <span class="mon">01 Maio</span> </div>
+                          <!--Image-->
+                          <figure> <img alt="" src="../imagens/hakers.jpg"> </figure>
+                        </div>
+                        <div class="item-box-blog-body">
+                          <!--Heading-->
+                          <div class="item-box-blog-heading">
+                            <a href="https://www.tecmundo.com.br/seguranca/140964-israel-impede-ciberataque-explodindo-predio-hackers.htm" tabindex="0">
+                              <h4>Israel impede ciberataque explodindo prédio com hackers</h4>
+                            </a>
+                          </div>
+                          <!--Data-->
+                          <div class="item-box-blog-data" style="padding: px 15px;">
+                            <p><i class="fa fa-user-o"></i> Admin, <i class="fa fa-comments-o"></i> Comentários(36)</p>
+                          </div>
+                          <!--Text-->
+                          <div class="item-box-blog-text">
+                            <p>As Forças de Defesa de Israel (IDF) afirmam que tiveram sucesso ao neutralizar uma tentativa de
+                               ciberataque contra o país ao explodir um prédio localizado na Faixa de Gaza.
+                              Segundo a IDF, os ataques hacker foram rastreados até o prédio em questão, que recebeu ataques aéreos via drones.
+                                Todo o ataque foi mostrado em um vídeo no Twitter, publicado pela própria IDF. As Forças de Israel </p>
+                          </div>
+                          <div class="mt"> <a href="https://www.tecmundo.com.br/seguranca/140964-israel-impede-ciberataque-explodindo-predio-hackers.htm" tabindex="0" class="btn bg-blue-ui white read">Leia mais...</a> </div>
+                          <!--Read More Button-->
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4" >
+                      <div class="item-box-blog">
+                        <div class="item-box-blog-image">
+                          <!--Date-->
+                          <div class="item-box-blog-date bg-blue-ui white"> <span class="mon">03 Maio</span> </div>
+                          <!--Image-->
+                          <figure> <img alt="" src="../imagens/face.jpg"> </figure>
+                        </div>
+                        <div class="item-box-blog-body">
+                          <!--Heading-->
+                          <div class="item-box-blog-heading">
+                            <a href="https://www.tecmundo.com.br/seguranca/140945-terceirizados-facebook-acessam-fotos-privadas-treinar-ia.htm" tabindex="0">
+                              <h4>Terceirizados do Facebook acessam suas fotos privadas para treinar IA</h4>
+                            </a>
+                          </div>
+                          <!--Data-->
+                          <div class="item-box-blog-data" style="padding: px 15px;">
+                            <p><i class="fa fa-user-o"></i> Admin, <i class="fa fa-comments-o"></i>Comentários(10)</p>
+                          </div>
+                          <!--Text-->
+                          <div class="item-box-blog-text">
+                            <p>Um grupo de 260 funcionários da empresa de tecnologia indiana Wipro tiveram acesso a milhões de mensagens, 
+                              vídeos e fotos compartilhados de forma privada no Facebook e no Instagram desde 2014.
+                               A informação foi revelada em uma investigação da agência de notícias Reuters e confirmada pela companhia.</p>
+                          </div>
+                           <div class="mt"> <a href="https://www.tecmundo.com.br/seguranca/140945-terceirizados-facebook-acessam-fotos-privadas-treinar-ia.htm" tabindex="0" class="btn bg-blue-ui white read">Leia mais...</a> </div>
+                          <!--Read More Button-->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--.row-->
+                </div>
+                <!--.item-->
+              </div>
+              <!--.carousel-inner-->
+            </div>
+            <!--.Carousel-->
+          </div>
+        </div>
+      </div>
+    </div>
+    
+ <!-- Footer -->
+
+ <div id="footer">
+  <div class="container well foot">
+      <h2 class="footertext"><center>Sobre:</center></h2>
+    </div>
+  <div class="container">
+      <div class="row">
+         
+            <div class="col-md-4">
+              <center>
+                <img src="../imagens/footerlogoUSCS.jpg" class="img-circle" alt="the-brains">
+                <br>
+                <h4 class="footertext">USCS</h4>
+                <p class="footertext">Universidade de São Caetano do Sul.<br>
+              </center>
+            </div>
+            <div class="col-md-4">
+              <center>
+                <img src="../imagens/logoc.jpg" class="img-circle" alt="...">
+                <br>
+                <h4 class="footertext">Escola de Computação</h4>
+                <p class="footertext">Ciência da Computação.<br>
+              </center>
+            </div>
+            <div class="col-md-4">
+              <center>
+                <img src="../imagens/escola_polite.jpg" class="img-circle" alt="...">
+                <br>
+                <h4 class="footertext">Escola Politécnica</h4>
+                <p class="footertext">Campus Conceição.<br>
+              </center>
+            </div>
+          </div>
+          <div class="row">
+            <div class="contato">
+                <p><a href="#">Contato</a><p><br>
+                  <div class="cop">
+                      <p class="footertext">Copyright 2019</p>
+                  </div>
+            </div>
+           
+            
+         </div>
+  </div>
+</div>
+</div>
+ 
+
+         
+          
+          
+    
+              
+
+
+
+
+
+
+
+
+
+
+
+
+</body>

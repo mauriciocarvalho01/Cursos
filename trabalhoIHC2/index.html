@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="generator" content="visual studio code">
+        <meta name="keywords" content="noticias USCS">
+        <meta name="description" content="noticias USCS">
+        <meta name="aplication-name" content="noticias USCS">
+        <link rel="stylesheet" href="_css.css">     
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+        <link rel="stylesheet" href="owl.carousel.min.css">
+        <link rel="stylesheet" href="owl.theme.default.min.css">
+       
+        
+        
+
+    
+    </head>
+
+
+    <body>
+
+      <nav class="navbar  navbar-dark">
+          </div>
+            <div class=" col-sm-4 main-topbar__searchbar-wrapper" id="buscar">
+              <div class="formbuscar">
+                  <span class="glyphicon glyphicon-search"></span>
+                <form action="" >
+                    <input type="search" name="buscar" class="main-topbar__searchbar" placeholder="Buscar">
+                </form>
+              </div>
+            </div>
+            <div class=" col-sm-4 main-topbar__pagename-wrapper">
+                <p class="main-topbar__pagename-item">Noticias Escola de Computação USCS</p>
+            </div>
+            <div class="col-sm-4 main-topbar__item-wrapper" id="criadores">
+              <div class="criadores">
+                <i class="fas fa-users"></i>Criadores
+              </div>
+            </div>
+            <div class="alunos" id="alunos">
+              <button type="button" class="btn btn-primary" id="mauricio">Mauricio Carvalho Pinheiro</button>
+              <button type="button" class="btn btn-primary" id="bruna">Bruna ----</button>
+              <button type="button" class="btn btn-primary" id="andre">Andre ----</button>
+              <button type="button" class="btn btn-primary" id="enzo">Enzo ----</button>
+            </div>
+     
+            <div class=" col-sm-12 main-topbar__searchbar-wrapper">
+                <div id="logo" class="iconUSCS">
+                    <img src="imagens/iconUSCS.jpg">
+                 </div>
+            </div>
+                
+      </nav>
+
+
+
+      <div class="page-wrapper chiller-theme toggled">
+        <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
+          <i class="fas fa-bars"></i>
+        </a>
+        <nav id="sidebar" class="sidebar-wrapper">
+          <div class="sidebar-content">
+            <div class="sidebar-brand">
+
+              <div id="close-sidebar">
+                <i class="fas fa-times"></i>
+              </div>
+            </div>
+            <!-- sidebar-header  -->
+            <div class="sidebar-search">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <div class="input-group">
+                  <input type="text" class="form-control search-menu" placeholder="Buscar">
+                </div>
+            </div>
+            <!-- sidebar-search  -->
+            <div class="sidebar-menu">
+              <ul>
+                <li class="header-menu">
+                  <span>Geral</span>
+                </li>
+                <li class="sidebar-dropdown">
+                  <a href="#">
+                    <i class="fas fa-laptop-code"></i>
+                    <span>Programação</span>
+                    
+                    <span class="badge badge-pill badge-warning">Novo</span>
+                  </a>
+                  <div class="sidebar-submenu">
+                    <ul>
+                      <li>
+                        <a href="#">Linguagens
+                          <span class="badge badge-pill badge-success">Pro</span>
+                        </a>
+                      </li>
+                      <li>
+                          <a href="#">Machine learning</a>
+                     </li>
+                        <li>
+                          <a href="#">Big Data</a>
+                        </li>
+                        <li>
+                          <a href="#">Banco de Dados</a>
+                        </li>
+                        <li>
+                          <a href="#">IOT</a>
+                        </li>
+                        <li>
+                          <a href="#">Inteligencia Artificial</a>
+                        </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="sidebar-dropdown">
+                  <a href="#">
+                      <i class="fas fa-robot"></i>
+                    <span>Tecnologia</span>
+                    <span class="badge badge-pill badge-danger">3</span>
+                  </a>
+                  <div class="sidebar-submenu">
+                    <ul>
+                      <li>
+                        <a href="tecno.html">Mais lidas
+      
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">Hardware</a>
+                      </li>
+                      <li>
+                        <a href="#">Software</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="sidebar-dropdown">
+                  <a href="#">
+                    <i class="fas fa-gamepad"></i>
+                    <span>Games</span>
+                  </a>
+                  <div class="sidebar-submenu">
+                    <ul>
+                      <li>
+                        <a href="#">Console</a>
+                      </li>
+                      <li>
+                        <a href="#">PC</a>
+                      </li>
+                      <li>
+                        <a href="#">Celular</a>
+                      </li>
+                      <li>
+                        <a href="#">Lançamentos</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="sidebar-dropdown">
+                  <a href="#">
+                    <i class="fab fa-youtube"></i>
+                    <span>USCStube</span>
+                  </a>
+                  <div class="sidebar-submenu">
+                    <ul>
+                      <li>
+                        <a href="uscstube.html">Videos</a>
+                      </li>
+                      <li>
+                        <a href="#">Músicas</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="sidebar-dropdown">
+                  <a href="#">
+                    <i class="fa fa-globe"></i>
+                    <span>Mundo</span>
+                  </a>
+                  <div class="sidebar-submenu">
+                    <ul>
+                      <li>
+                        <a href="#">Inovação</a>
+                      </li>
+                      <li>
+                        <a href="#">Ciência</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="header-menu">
+                  <span>Sobre a USCS</span>
+                </li>
+                <li>
+                  <a href="http://www.uscs.edu.br/cursos-de-graduacao/escola-de-computacao/ciencia-da-computacao/">
+        
+                        <img src="imagens/escola_politecnica.jpg">
+             
+                    <span>Escola Politécnica</span>
+                    <span class="badge badge-pill badge-primary">Visite</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.uscs.edu.br/">
+                      <i><img  src="imagens/logoUSCS.jpg"></i>
+                    <span>USCS</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="http://noticias.uscs.edu.br/">
+                      <i class="fas fa-newspaper"></i>
+                    <span>Noticias USCS</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- sidebar-menu  -->
+          </div>
+          <!-- sidebar-content  -->
+          <div class="sidebar-footer">
+            <a href="#">
+              <i class="fa fa-bell"></i>
+              <span class="badge badge-pill badge-warning notification">3</span>
+            </a>
+            <a href="#">
+              <i class="fa fa-envelope"></i>
+              <span class="badge badge-pill badge-success notification">7</span>
+            </a>
+            <a href="#">
+              <i class="fa fa-cog"></i>
+              <span class="badge-sonar"></span>
+            </a>
+            <a href="#">
+              <i class="fa fa-power-off"></i>
+            </a>
+          </div>
+        </nav>
+            
+
+
+              <!--Slideshow principal
+              <div class="container">
+                    
+                  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                       
+                          <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                            <li data-target="#myCarousel" data-slide-to="3"class="active"></li>
+                          </ol>
+        
+                          <div class="carousel-inner">
+                            <div class="item">
+                              <img src="imagens/patinete.jpg"  class="img-responsive">
+                              <div class="carousel-caption d-none d-md-block">
+                                 <a href="tecno.html"><h2>Patinetes são hackeadas e saem por aí distribuindo ofensas sexuais</h2>
+                                 <h3>Mais lidas</h3></a>
+
+                               </div>
+                            </div>
+                        
+                            <div class="item">
+                                  <img src="imagens/musk.jpg" class="img-responsive">
+                                  <div class="carousel-caption d-none d-md-block">
+                                      <a href="tecno.html"><h2>Entenda: afinal, qual é o problema com Elon Musk?</h2>
+                                     <h3>Mais lidas</h3></a>
+                                   </div>
+                            </div>
+                        
+                            <div class="item">
+                                  <img src="imagens/tv.jpg" class="img-responsive"> 
+                                  <div class="carousel-caption d-none d-md-block">
+                                     <a href="tecno.html"> <h2>  Smart TV monstro 8K de 98 polegadas da Sony sai pela bagatela de US$ 70 mil</h2>
+                                     <h3>Mais lidas</h3></a>
+                                  </div> 
+                            </div>
+                            <div class="item active">
+                                  <img src="imagens/tv.jpg" class="img-responsive">
+                                  <div class="carousel-caption d-none d-md-block">
+                                     <a href="tecno.html"><h2>  Smart TV monstro 8K de 98 polegadas da Sony sai pela bagatela de US$ 70 mil</h2>
+                                     <h3>Mais lidas</h3></a>
+                                  </div> 
+                               </div>
+                          </div>
+                        
+                       
+                          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                            <span class="sr-only"></span>
+                          </a>
+                          <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                            <span class="sr-only"></span>
+                          </a>
+                        </div>
+                  </div>
+                        fim slideshow principal-->
+
+
+                  <!--Slideshow secundario-->
+                       
+                          
+                  <div class="owl-carousel owl-theme">
+                      <div class="item"> <img src="imagens/musk.jpg"  class="img-responsive"><p>Entenda: afinal, qual é o problema com Elon Musk?</p></div>
+                      <div class="item"> <img src="imagens/tv.jpg" class="img-responsive"><p>Smart TV monstro 8K de 98 polegadas da Sony sai pela bagatela de US$ 70 mil</p></div>
+                      <div class="item">  <img src="imagens/patinete.jpg" class="img-responsive"><p>Patinetes são hackeadas e saem por aí distribuindo ofensas sexuais</p></div>
+                      <div class="item"> <img src="imagens/ft1.jpg"  class="img-responsive"><p>Patinetes são hackeadas e saem por aí distribuindo ofensas sexuais</p></div>
+                      <div class="item"> <img src="imagens/musk.jpg"  class="img-responsive"><p>Entenda: afinal, qual é o problema com Elon Musk?</p></div>
+                      <div class="item"> <img src="imagens/tv.jpg" class="img-responsive"><p>Smart TV monstro 8K de 98 polegadas da Sony sai pela bagatela de US$ 70 mil</p></div>
+                      <div class="item">  <img src="imagens/patinete.jpg" class="img-responsive"><p>Patinetes são hackeadas e saem por aí distribuindo ofensas sexuais</p></div>
+                      <div class="item"> <img src="imagens/ft1.jpg"  class="img-responsive"><p>Patinetes são hackeadas e saem por aí distribuindo ofensas sexuais</p></div>
+                      <div class="item"> <img src="imagens/musk.jpg"  class="img-responsive"><p>Entenda: afinal, qual é o problema com Elon Musk?</p></div>
+                      <div class="item"> <img src="imagens/tv.jpg" class="img-responsive"><p>Smart TV monstro 8K de 98 polegadas da Sony sai pela bagatela de US$ 70 mil</p></div>
+                      <div class="item">  <img src="imagens/patinete.jpg" class="img-responsive"><p>Patinetes são hackeadas e saem por aí distribuindo ofensas sexuais</p></div>
+                      <div class="item"> <img src="imagens/ft1.jpg"  class="img-responsive"><p>Patinetes são hackeadas e saem por aí distribuindo ofensas sexuais</p></div>
+     
+                  </div>
+            
+                  
+                  
+                      <footer class="foot">
+                          <h3 id="frase">"O segredo da criatividade é saber como esconder as fontes."
+                              Albert Einstein<span class="piscar">|</span>
+                         </h3>
+                        
+                          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="cop">
+                              <p> <small> &copy Copyright 2019 </small> </p> 
+                              <p><small>Site desenvolvido como trabalho final para a matéria: Interação Humano Computador do curso de Ciência da Computação.</small></p>
+                          </div>
+                      </footer>
+
+
+
+<script>
+
+
+$(function ($) {
+
+$(".sidebar-dropdown > a").click(function() {
+$(".sidebar-submenu").slideUp(200);
+if (
+$(this)
+  .parent()
+  .hasClass("active")
+) {
+$(".sidebar-dropdown").removeClass("active");
+$(this)
+  .parent()
+  .removeClass("active");
+} else {
+$(".sidebar-dropdown").removeClass("active");
+$(this)
+  .next(".sidebar-submenu")
+  .slideDown(200);
+$(this)
+  .parent()
+  .addClass("active");
+}
+});
+
+$("#close-sidebar").click(function() {
+$(".page-wrapper").removeClass("toggled");
+$("#logo").removeClass("iconUSCS");
+$("#logo").addClass("iconeUSCS");
+ 
+});
+$("#show-sidebar").click(function() {
+$(".page-wrapper").addClass("toggled");
+$("#logo").removeClass("iconeUSCS");
+$("#logo").addClass("iconUSCS");
+  
+});
+});
+
+$(function(){
+$('.panel').hover(function(){
+        $(this).find('.panel-footer').slideDown(250);
+    },function(){
+        $(this).find('.panel-footer').slideUp(250); //.fadeOut(205)
+    });
+})
+
+
+
+
+
+
+
+    const sumirFrase = () =>{
+        document.getElementById("frase").classList.add("frase");
+        return true;
+    }  
+    const aparecerFrase = () =>{
+        document.getElementById("frase").classList.remove("frase");   
+    }
+
+    const automatizaFrase = () =>{
+        setInterval(sumirFrase,5000);
+        return true;
+    }
+    
+
+    if(automatizaFrase()){
+        setInterval(aparecerFrase,0);
+        
+    }
+
+
+</script>
+<script src="jquery-3.2.1.min.js"></script>
+<script src="owl.carousel.min.js"></script>
+<script src="script2.js"></script>
+</body>
+</html>

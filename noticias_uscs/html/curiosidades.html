@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="generator" content="visual studio code">
+        <meta name="keywords" content="noticias USCS">
+        <meta name="description" content="noticias USCS">
+        <meta name="aplication-name" content="noticias USCS">
+        <link rel="stylesheet" href="../css/style.css"> 
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> 
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="../js/script.js"></script>  
+        <script src="../js/jquery-3.2.1.min.js"></script>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      
+           
+            <script>
+              $(document).ready(function(){
+                Swal.fire({
+                  title: 'Notícias retiradas do portal Tecmundo',
+                  text: 'Site criado para fins didáticos',
+                  imageUrl: '../imagens/tecnmundo.jpg',
+                  imageWidth: 400,
+                  imageHeight: 400,
+                  imageAlt: 'Custom image',
+                  animation: true
+               })
+              });
+            </script>
+    
+        
+
+    
+    </head>
+
+    
+    <body>
+        <nav class="navbar navbar-fixed">
+          </div>
+            <div class=" col-sm-4 main-topbar__searchbar-wrapper" id="buscar">
+              <div class="formbuscar" id="formbuscar">
+                  <span class="glyphicon glyphicon-search"></span>
+                <form action="" >
+                    <input type="search" name="buscar" class="main-topbar__searchbar" placeholder="Buscar">
+                </form>
+              </div>
+            </div>
+            <div class=" col-sm-4 main-topbar__pagename-wrapper">
+                <p class="main-topbar__pagename-item">Noticias Escola de Computação USCS</p>
+            </div>
+            <div class=" col-sm-4 main-topbar__item-wrapper" >
+              <div id="criadores" class="botaocriadores">
+                <i class="fas fa-users"></i>Criadores  
+              </div>   
+           </div>
+           <div class="alunos" id="alunos">
+              <button type="button" class="btn btn-primary" id="mauricio">Mauricio</button>
+              <button type="button" class="btn btn-primary" id="bruna">Bruna</button>
+              <button type="button" class="btn btn-primary" id="andre">Andre</button>
+              <button type="button" class="btn btn-primary" id="enzo">Enzo</button>
+              <button type="button" class="btn btn-primary" id="allyson">Marcelo</button>
+            </div>
+            <div class=" col-sm-12 main-topbar__searchbar-wrapper">
+              <div id="logo" class="iconUSCS">
+                <img src="../imagens/iconUSCS.jpg">
+              </div>
+            </div>
+            
+ </nav>
+
+<!--FIM MENU SUPERIOR-->
+
+<div class="page-wrapper chiller-theme toggled">
+    <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
+      <i class="fas fa-bars"></i>
+    </a>
+    <nav id="sidebar" class="sidebar-wrapper">
+      <div class="sidebar-content">
+        <div class="sidebar-brand">
+          <div id="close-sidebar">
+            <i class="fas fa-times"></i>
+          </div>
+        </div>
+        <!-- sidebar-header  -->
+        <div class="sidebar-search">
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <div class="input-group">
+              <input type="text" class="form-control search-menu" placeholder="Buscar">
+            </div>
+        </div>
+        <!-- sidebar-search  -->
+        <div class="sidebar-menu">
+          <ul>
+            <li class="header-menu">
+              <span>Geral</span>
+            </li>
+            <li class="sidebar-dropdown">
+              <a href="#">
+                <i class="fas fa-laptop-code"></i>
+                <span>Programação</span>
+                
+                <span class="badge badge-pill badge-warning">Novo</span>
+              </a>
+              <div class="sidebar-submenu">
+                <ul>
+                  <li>
+                    <a href="#">Linguagens
+                      <span class="badge badge-pill badge-success">Pro</span>
+                    </a>
+                  </li>
+                  <li>
+                      <a href="#">Machine learning</a>
+                 </li>
+                    <li>
+                      <a href="#">Big Data</a>
+                    </li>
+                    <li>
+                      <a href="#">Banco de Dados</a>
+                    </li>
+                    <li>
+                      <a href="#">IOT</a>
+                    </li>
+                    <li>
+                      <a href="#">Inteligencia Artificial</a>
+                    </li>
+                    <li>
+                      <a href="#">Outros</a>
+                    </li>
+                </ul>
+              </div>
+            </li>
+            <li class="sidebar-dropdown">
+              <a href="#">
+                  <i class="fas fa-robot"></i>
+                <span>Tecnologia</span>
+                <span class="badge badge-pill badge-danger">3</span>
+              </a>
+              <div class="sidebar-submenu">
+                <ul>
+                  <li>
+                    <a href="index.html">Mais lidas
+  
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">Hardware</a>
+                  </li>
+                  <li>
+                    <a href="#">Software</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="sidebar-dropdown">
+              <a href="#">
+                <i class="fas fa-gamepad"></i>
+                <span>Games</span>
+              </a>
+              <div class="sidebar-submenu">
+                <ul>
+                  <li>
+                    <a href="#">Console</a>
+                  </li>
+                  <li>
+                    <a href="games.html">PC</a>
+                  </li>
+                  <li>
+                    <a href="#">Celular</a>
+                  </li>
+                  <li>
+                    <a href="#">Lançamentos</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="sidebar-dropdown">
+              <a href="#">
+                <i class="fab fa-youtube"></i>
+                <span>USCStube</span>
+              </a>
+              <div class="sidebar-submenu">
+                <ul>
+                  <li>
+                    <a href="uscstube.html">Videos</a>
+                  </li>
+                  <li>
+                    <a href="#">Músicas</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="sidebar-dropdown">
+              <a href="#">
+                <i class="fa fa-globe"></i>
+                <span>Mundo</span>
+              </a>
+              <div class="sidebar-submenu">
+                <ul>
+                  <li>
+                    <a href="#">Inovação</a>
+                  </li>
+                  <li>
+                    <a href="ciencia.html">Ciência</a>
+                  </li>
+                  <li>
+                    <a href="curiosidades.html">Curiosidades</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="header-menu">
+              <span>Sobre</span>
+            </li>
+            <li>
+              <a href="http://www.uscs.edu.br/cursos-de-graduacao/escola-de-computacao/ciencia-da-computacao/">
+    
+                    <img src="../imagens/escola_politecnica.jpg">
+         
+                <span>Escola Politécnica</span>
+                <span class="badge badge-pill badge-primary">Visite</span>
+              </a>
+            </li>
+            <li>
+              <a href="http://www.uscs.edu.br/">
+                  <i><img  src="../imagens/logoUSCS.jpg"></i>
+                <span>USCS</span>
+              </a>
+            </li>
+            <li>
+              <a href="http://noticias.uscs.edu.br/">
+                  <i><img src="../imagens/logo01.jpg"></i>
+                <span>Escola da Computação</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- sidebar-menu  -->
+      </div>
+      <!-- sidebar-content  -->
+      <div class="sidebar-footer">
+        <a href="#">
+          <i class="fa fa-bell"></i>
+          <span class="badge badge-pill badge-warning notification">3</span>
+        </a>
+        <a href="#">
+          <i class="fa fa-envelope"></i>
+        
+        </a>
+        <a href="#">
+          <i class="fa fa-cog"></i>
+          <span class="badge-sonar"></span>
+        </a>
+        <a href="#">
+          <i class="fa fa-power-off"></i>
+        </a>
+      </div>
+    </nav>
+<!--FIM MENU LATERAL-->
+
+
+<!--CURIOSIDADES-->
+<div class="container-fluid">
+    <!--local-->
+    <div class="local">
+       <span class="locali"><i class="fas fa-angle-double-left"></i>Voltar</span>
+       <span><i class="fas fa-angle-double-right"></i>Curiosidades</span>
+   </div>
+   <div class="container cta-100 ">
+     <div class="container">
+       <div class="row blog">
+         <div class="col-md-12">
+           <div id="blogCarousel" class="carousel slide container-blog" data-ride="carousel">
+              <ol class="carousel-indicators">
+                 <li data-target="#blogCarousel" data-slide-to="0" class="active"></li>
+                 <li data-target="#blogCarousel" data-slide-to="1"></li>
+               </ol>
+             <!-- Carousel items -->
+             <div class="carousel-inner">
+               <div class="carousel-item active">
+                 <div class="row">
+                   <div class=" col-sm-2 col-md-4" >
+                     <div class="item-box-blog">
+                       <div class="item-box-blog-image">
+                         <!--Date-->
+                         <div class="item-box-blog-date bg-blue-ui white"> <span class="mon">22 Maio</span> </div>
+                         <!--Image-->
+                         <figure> <img alt="" src="../imagens/sonda.jpg"> </figure>
+                       </div>
+                       <div class="item-box-blog-body">
+                         <!--Heading-->
+                         <div class="item-box-blog-heading">
+                           <a href="https://www.tecmundo.com.br/ciencia/135530-ha-20-anos-sonda-deep-space-1-partia-testar-tecnologias-espaco.htm" tabindex="0">
+                             <h4>Há 20 anos,</br> a sonda Deep Space 1 partia para testar tecnologias no espaço</h4>
+                           </a>
+                         </div>
+                         <!--Data-->
+                         <div class="item-box-blog-data" style="padding: px 15px;">
+                           <p><i class="fa fa-user-o"></i> Admin, <i class="fa fa-comments-o"></i> Comentários(13)</p>
+                         </div>
+                         <!--Text-->
+                         <div class="item-box-blog-text">
+                           <p>A data de hoje, 24 de outubro de 2018, marca os 20 anos do lançamento da sonda Deep Space 1, que partiu do Cabo Canaveral, na Flórida, para sobrevoar o asteroide 9969 Braille testando uma série de novas tecnologias que, depois disso, vieram a colaborar muito com o avanço das pesquisas e da exploração espaciais
+                              realizadas pela NASA – a responsável pela missão – e outras agências ou empresas privadas.
+                              Originalmente, o planejamento da NASA indicava que a sonda deveria se aproximar de
+                               um asteroide com rota próxima da Terra. Alguns atrasos no lançamento da Deep Space 
+                               1 obrigaram os cientistas a mudar de plano e escolher outro asteroide para a aproximação da sonda:
+                                o escolhido foi o 9969 Braille. Em seguida, um cometa também passando perto do nosso planeta seria analisado, 
+                              mas também acabou sendo alterado por um probleminha na trajetória da missão.</p>
+                         </div>
+                         <div class="mt"> <a href="https://www.tecmundo.com.br/ciencia/135530-ha-20-anos-sonda-deep-space-1-partia-testar-tecnologias-espaco.htm" tabindex="0" class="btn bg-blue-ui white read">Leia mais</a> </div>
+                         <!--Read More Button-->
+                       </div>
+                     </div>
+                   </div>
+                   <div class=" col-sm-2 col-md-4" >
+                     <div class="item-box-blog">
+                       <div class="item-box-blog-image">
+                         <!--Date-->
+                         <div class="item-box-blog-date bg-blue-ui white"> <span class="mon">21 Maio</span> </div>
+                         <!--Image-->
+                         <figure> <img alt="" src="../imagens/ia.jpg"> </figure>
+                       </div>
+                       <div class="item-box-blog-body">
+                         <!--Heading-->
+                         <div class="item-box-blog-heading">
+                           <a href="https://www.tecmundo.com.br/mercado/135413-historia-inteligencia-artificial-video.htm" tabindex="0">
+                             <h4>A história</br> da inteligência artificial</br> [vídeo]</h4>
+                           </a>
+                         </div>
+                         <!--Data-->
+                         <div class="item-box-blog-data" style="padding: px 15px;">
+                           <p><i class="fa fa-user-o"></i> Admin, <i class="fa fa-comments-o"></i> Comentários(22)</p>
+                         </div>
+                         <!--Text-->
+                         <div class="item-box-blog-text">
+                           <p>O tema é tão inspirador que Hollywood nunca deixou de falar dele.
+                              Desde Metropolis, filme mudo de 1927, temos produções com robôs, 
+                              computadores e programas que agem para o nosso bem ou em busca da nossa destruição.
+                               Rapidinho, dá pra citar "Blade Runner: O Caçador de Androides"; "A.I. Inteligência Artificial"; 
+                               "Ela", aquele sobre uma assistente pessoal com a voz da Scarlett Johansson; as franquias Matrix e
+                                Exterminador do Futuro; "Eu, Robô", que é baseado na obra essencial de Isaac Asimov; 
+                             e "2001: Uma Odisseia no Espaço" com o ameaçador HAL 9000.</p>
+                         </div>
+                         <div class="mt"> <a href="https://www.tecmundo.com.br/mercado/135413-historia-inteligencia-artificial-video.htm" tabindex="0" class="btn bg-blue-ui white read">Leia mais</a> </div>
+                         <!--Read More Button-->
+                       </div>
+                     </div>
+                   </div>
+                   <div class=" col-sm-2 col-md-4" >
+                     <div class="item-box-blog">
+                       <div class="item-box-blog-image">
+                         <!--Date-->
+                         <div class="item-box-blog-date bg-blue-ui white"> <span class="mon">20 Maio</span> </div>
+                         <!--Image-->
+                         <figure> <img alt="" src="../imagens/marvel.jpg"> </figure>
+                       </div>
+                       <div class="item-box-blog-body">
+                         <!--Heading-->
+                         <div class="item-box-blog-heading">
+                           <a href="https://www.tecmundo.com.br/cultura-geek/140635-historia-secreta-marvel-sucesso-vingadores-ultimato.htm" tabindex="0">
+                             <h4>A história secreta da Marvel até o sucesso de</br> “Vingadores: Ultimato”</h4>
+                           </a>
+                         </div>
+                         <!--Data-->
+                         <div class="item-box-blog-data" style="padding: px 15px;">
+                           <p><i class="fa fa-user-o"></i> Admin, <i class="fa fa-comments-o"></i> Comentários(154)</p>
+                         </div>
+                         <!--Text-->
+                         <div class="item-box-blog-text">
+                           <p>Quem vê os resultados do Marvel Studios e a popularidade dos heróis de “Vingadores: 
+                             Ultimato” talvez não imagine o árduo caminho feito dentro e fora das telinhas. 
+                             A Marvel Comics e a Marvel Entertainment; o cenário do entretenimento e a interligação de
+                              todas as mídias em um projeto audacioso, nunca realizado na cultura em todos os tempos;
+                              são coisas que fazem dessa história ainda mais interessante.</p>
+                         </div>
+                         <div class="mt"> <a href="https://www.tecmundo.com.br/cultura-geek/140635-historia-secreta-marvel-sucesso-vingadores-ultimato.htm" tabindex="0" class="btn bg-blue-ui white read">Leia mais</a> </div>
+                         <!--Read More Button-->
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+                 <!--.row-->
+               </div>
+               <!--.item-->
+               <div class="carousel-item ">
+                 <div class="row">
+                   <div class=" col-sm-2 col-md-4" >
+                     <div class="item-box-blog">
+                       <div class="item-box-blog-image">
+                         <!--Date-->
+                         <div class="item-box-blog-date bg-blue-ui white"> <span class="mon">25 Maio</span> </div>
+                         <!--Image-->
+                         <figure> <img alt="" src="../imagens/matrix.jpg"> </figure>
+                       </div>
+                       <div class="item-box-blog-body">
+                         <!--Heading-->
+                         <div class="item-box-blog-heading">
+                           <a href="https://www.tecmundo.com.br/cultura-geek/139997-matrix-20-anos-ha-risco-sermos-dominados-maquinas-filme.htm" tabindex="0">
+                             <h4>Matrix 20 anos: há risco de sermos dominados pelas máquinas como no filme?</h4>
+                           </a>
+                         </div>
+                         <!--Data-->
+                         <div class="item-box-blog-data" style="padding: px 15px;">
+                           <p><i class="fa fa-user-o"></i> Admin, <i class="fa fa-comments-o"></i> Comentários(52)</p>
+                         </div>
+                         <!--Text-->
+                         <div class="item-box-blog-text">
+                           <p>O filme “Matrix” é, sem sombra de dúvida, um dos maiores clássicos da ficção científica da história do cinema.
+                              Em pleno ano de 1999, a película nos levou para uma realidade distópica apavorante onde todos os seres humanos 
+                              foram dominados por uma inteligência artificial e, enquanto servem como fonte de energia para as máquinas,
+                               vivem dentro de uma simulação, uma realidade virtual feita para imitar a sociedade humana perto da virada do
+                                século XX para o XXI e manter todo mundo inconsciente sobre a situação.
+                              A produção original ainda teve duas grandes sequências: "</p>
+                         </div>
+                         <div class="mt"> <a href="https://www.tecmundo.com.br/cultura-geek/139997-matrix-20-anos-ha-risco-sermos-dominados-maquinas-filme.htm" tabindex="0" class="btn bg-blue-ui white read">Leia mais</a> </div>
+                         <!--Read More Button-->
+                       </div>
+                     </div>
+                   </div>
+                   <div class=" col-sm-2 col-md-4" >
+                     <div class="item-box-blog">
+                       <div class="item-box-blog-image">
+                         <!--Date-->
+                         <div class="item-box-blog-date bg-blue-ui white"> <span class="mon">24 Maio</span> </div>
+                         <!--Image-->
+                         <figure> <img alt="" src="../imagens/mp3.jpg"> </figure>
+                       </div>
+                       <div class="item-box-blog-body">
+                         <!--Heading-->
+                         <div class="item-box-blog-heading">
+                           <a href="https://www.tecmundo.com.br/mercado/139452-historia-mp3-formato-espalhou-musica-digital-video.htm" tabindex="0">
+                             <h4>A história do MP3,</br> o formato que espalhou a música digital [vídeo]</h4>
+                           </a>
+                         </div>
+                         <!--Data-->
+                         <div class="item-box-blog-data" style="padding: px 15px;">
+                           <p><i class="fa fa-user-o"></i> Admin, <i class="fa fa-comments-o"></i> Comentários(14)</p>
+                         </div>
+                         <!--Text-->
+                         <div class="item-box-blog-text">
+                           <p>A série de história da tecnologia vai falar essa semana sobre um formato de áudio só, 
+                             mas com certeza ele é o favorito de muita gente por aí. É o MP3,
+                             que já é uma tecnologia maior de idade e que revolucionou a música e a internet.
+                              Antes, não se esqueça de conferir a playlist completa do História da Tecnologia para
+                               saber de tudo o que a gente já falou por aqui, além de se inscrever no canal do TecMundo no YouTube para
+                                mais conteúdos como esse.
+                                Antes, não se esqueça de conferir a playlist completa do História da Tecnologia para saber de 
+                                tudo o que a gente já falou por aqui, 
+                                além de se inscrever no canal do TecMundo no YouTube para mais conteúdos como esse.
+                              </p>
+                         </div>
+                         <div class="mt"> <a href="https://www.tecmundo.com.br/mercado/139452-historia-mp3-formato-espalhou-musica-digital-video.htm" tabindex="0" class="btn bg-blue-ui white read">Leia mais</a> </div>
+                         <!--Read More Button-->
+                       </div>
+                     </div>
+                   </div>
+                   <div class=" col-sm-2 col-md-4" >
+                     <div class="item-box-blog">
+                       <div class="item-box-blog-image">
+                         <!--Date-->
+                         <div class="item-box-blog-date bg-blue-ui white"> <span class="mon">23 Maio</span> </div>
+                         <!--Image-->
+                         <figure> <img alt="" src="../imagens/tecno.jpg"> </figure>
+                       </div>
+                       <div class="item-box-blog-body">
+                         <!--Heading-->
+                         <div class="item-box-blog-heading">
+                           <a href="https://www.tecmundo.com.br/mercado/137609-15-tecnologias-descontinuadas-2018-video.htm" tabindex="0">
+                             <h4>15 tecnologias que foram </br>descontinuadas em 2018 </br>[vídeo]</h4>
+                           </a>
+                         </div>
+                         <!--Data-->
+                         <div class="item-box-blog-data" style="padding: px 15px;">
+                           <p><i class="fa fa-user-o"></i> Admin, <i class="fa fa-comments-o"></i> Comentários(36)</p>
+                         </div>
+                         <!--Text-->
+                         <div class="item-box-blog-text">
+                           <p>O ano de 2018 foi cheio de novidades em tecnologia, com vários lançamentos de produtos e serviços. Mas foi também o momento da gente se despedir de muitas coisas. 
+                             São eletrônicos que já ficaram datados, serviços aposentados ou simplesmente planos que não deram certo.
+                              O TecMundo separou quem não teve muitos motivos pra comemorar a virada pra 2019 e, olha deve ter
+                               muita coisa favorita de vocês aí no meio. Confira a lista a seguir!</p>
+                         </div>
+                          <div class="mt"> <a href="https://www.tecmundo.com.br/mercado/137609-15-tecnologias-descontinuadas-2018-video.htm" tabindex="0" class="btn bg-blue-ui white read">Leia mais</a> </div>
+                         <!--Read More Button-->
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+                 <!--.row-->
+               </div>
+               <!--.item-->
+             </div>
+             <!--.carousel-inner-->
+           </div>
+           <!--.Carousel-->
+         </div>
+       </div>
+     </div>
+   </div>
+
+
+
+
+ <!-- Footer -->
+  <div id="footer">
+      <div class="container well foot">
+          <h2 class="footertext"><center>Sobre:</center></h2>
+        </div>
+      <div class="container">
+          <div class="row">
+             
+                <div class="col-md-4">
+                  <center>
+                    <img src="../imagens/footerlogoUSCS.jpg" class="img-circle" alt="the-brains">
+                    <br>
+                    <h4 class="footertext">USCS</h4>
+                    <p class="footertext">Universidade de São Caetano do Sul.<br>
+                  </center>
+                </div>
+                <div class="col-md-4">
+                  <center>
+                    <img src="../imagens/logoc.jpg" class="img-circle" alt="...">
+                    <br>
+                    <h4 class="footertext">Escola de Computação</h4>
+                    <p class="footertext">Ciência da Computação.<br>
+                  </center>
+                </div>
+                <div class="col-md-4">
+                  <center>
+                    <img src="../imagens/escola_polite.jpg" class="img-circle" alt="...">
+                    <br>
+                    <h4 class="footertext">Escola Politécnica</h4>
+                    <p class="footertext">Campus Conceição.<br>
+                  </center>
+                </div>
+              </div>
+              <div class="row">
+                <div class="contato">
+                    <p><a href="#">Contato</a><p><br>
+                      <div class="cop">
+                          <p class="footertext">Copyright 2019</p>
+                      </div>
+                </div>
+               
+                
+             </div>
+      </div>
+  </div>
+        </div>
+
+            
+                    <!--
+                      
+                      <h3 id="frase">"O segredo da criatividade é saber como esconder as fontes."
+                          Albert Einstein
+                     </h3>
+                    -->
+    
+       
+               
+              
+ 
+
+                          
+    
+
+            <script src="../js/script.js"></script>
+            <script src="../js/jquery-2.1.3.min.js"></script>
+            <script src="../js/app.js"></script>
+            <script src="https://apis.google.com/js/client.js?onload=init"></script>
+            <!-- scripts -->
+            <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+            <script src="https://apis.google.com/js/client.js?onload=init"></script>
+
+           
+    </body>
+</html>
